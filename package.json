@@ -1,0 +1,25 @@
+{
+  "name": "bookStore",
+  "version": "1.0.0",
+  "description": "Final project for Comtrade school.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veljko1992/bookStore.git"
+  },
+  "author": "Veljko Ivanovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veljko1992/bookStore.git/issues"
+  },
+  "homepage": "https://veljko1992.github.io/bookStore/",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "node-sass": "^4.11.0"
+  }
+}
