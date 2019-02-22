@@ -19,6 +19,8 @@
     } else {
       nav.css("display", "none");
       menuBtn.css("display", "block");
+      $("#menu-btn span").removeClass("bOpen");
+      nav.removeClass("open");
     }
   });
 
