@@ -8,15 +8,13 @@
     <!-- Grid and reboot -->
     <link rel="stylesheet" href="css/grid.css" />
     <link rel="stylesheet" href="css/reboot.css" />
-    <!-- Grid and reboot END -->
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <!-- Font Awesome END -->
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
-    <!-- Main CSS END -->
   </head>
   <body>
+    <!-- Header -->
     <header>
       <div id="headerTop">
         <p>Za sve porudzbine preko 2500 din. dostava je besplatna.</p>
@@ -38,93 +36,32 @@
         <div id="menu-btn"><span></span> <span></span> <span></span></div>
       </div>
     </header>
+    <!-- Main Content -->
     <main>
       <div class="container">
         <div id="newBooks">
           <h1>NEW BOOKS</h1>
-          <div class="row">
-            <div class="bookItems col-6">
-              <div class="bookItem">
-                <div class="imgWrapper"><img src="img/b1.jpg" alt="" class="img-fluid"></div>
-                <div class="textWrapper">
-                  <ul>
-                    <li>720din.</li>
-                    <li><a href="">Kupite</a></li>
-                  </ul>
-                </div>
-              </div>
+            <div id="newBookItems" class="row">
+              <!-- New books template -->
             </div>
-            <div class="bookItems col-6">
-              <div class="bookItem">
-                <div class="imgWrapper"><img src="img/b1.jpg" alt="" class="img-fluid"></div>
-                <div class="textWrapper">
-                  <ul>
-                    <li>720din.</li>
-                    <li><a href="">Kupite</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div id="topBooks">
           <h2>TOP BOOKS</h2>
-          <div class="row">
-            <div class="bookItems col-6">
-              <div class="bookItem">
-                <div class="imgWrapper"><img src="img/b1.jpg" alt="" class="img-fluid"></div>
-                <div class="textWrapper">
-                  <ul>
-                    <li>720din.</li>
-                    <li><a href="">Kupite</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="bookItems col-6">
-              <div class="bookItem">
-                <div class="imgWrapper"><img src="img/b1.jpg" alt="" class="img-fluid"></div>
-                <div class="textWrapper">
-                  <ul>
-                    <li>720din.</li>
-                    <li><a href="">Kupite</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div id="topBookItems" class="row">
+            <!-- Top books template -->
           </div>
         </div>
 
         <div id="salesBooks">
           <h2>SALES BOOKS</h2>
-          <div class="row">
-            <div class="bookItems col-6">
-              <div class="bookItem">
-                <div class="imgWrapper"><img src="img/b1.jpg" alt="" class="img-fluid"></div>
-                <div class="textWrapper">
-                  <ul>
-                    <li>720din.</li>
-                    <li><a href="">Kupite</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="bookItems col-6">
-              <div class="bookItem">
-                <div class="imgWrapper"><img src="img/b1.jpg" alt="" class="img-fluid"></div>
-                <div class="textWrapper">
-                  <ul>
-                    <li>720din.</li>
-                    <li><a href="">Kupite</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div id="salesBookItems" class="row">
+            <!-- Sales books template -->
           </div>
         </div>
       </div>
     </main>
+    <!-- Footer -->
     <footer>
       <div class="countainer">
           <div class="row">
@@ -153,8 +90,13 @@
       crossorigin="anonymous"
     ></script>
     <!-- jQuery END -->
+    <!-- New books template -->
+    <script src="js/newBooksTemplate.js"></script>
+    <!-- Top books template -->
+    <script src="js/topBooksTemplate.js"></script>
+    <!-- Top books template -->
+    <script src="js/salesBooksTemplate.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
-    <!-- Main JS END -->
   </body>
 </html>
