@@ -3,46 +3,55 @@
         "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
         "price" : "2.860,00 RSD",
         "img" : "b1.jpg",
-        "atribute" : "new"
+        "atribute" : "new",
+        "categorie" : "computer"
     },
     {
         "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
         "price" : "2.860,00 RSD",
         "img" : "b1.jpg",
-        "atribute" : "top"
+        "atribute" : "top",
+        "categorie" : "economy"
     },
     {
         "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
         "price" : "2.860,00 RSD",
         "img" : "b1.jpg",
-        "atribute" : "sales"
-    },
-    {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg"
-    },
-    {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
-        "atribute" : "new"
-    },
-    {
-        "name" : "ANDROID 9 KOTLIN",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
-        "atribute" : "top"
+        "atribute" : "sales",
+        "categorie" : "medicine"
     },
     {
         "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
         "price" : "2.860,00 RSD",
         "img" : "b1.jpg",
-        "atribute" : "sales"
+        "categorie" : "social"
     },
     {
         "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
         "price" : "2.860,00 RSD",
-        "img" : "b1.jpg"
+        "img" : "b1.jpg",
+        "atribute" : "new",
+        "categorie" : "computer"
+    },
+    {
+        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
+        "price" : "2.860,00 RSD",
+        "img" : "b1.jpg",
+        "atribute" : "top",
+        "categorie" : "economy"
+    },
+    {
+        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
+        "price" : "2.860,00 RSD",
+        "img" : "b1.jpg",
+        "atribute" : "sales",
+        "categorie" : "medicine"
+    },
+    {
+        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
+        "price" : "2.860,00 RSD",
+        "img" : "b1.jpg",
+        "categorie" : "social"
     }
+
 ]

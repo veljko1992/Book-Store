@@ -12,7 +12,7 @@ $.getJSON("json/books.json", function (result) {
                               <ul>
                                 <li>${newBook[i].name}</li>
                                 <li>${newBook[i].price}</li>
-                                <li><a href="">Kupite</a></li>
+                                <li id="addItem"><a href="">Kupite</a></li>
                               </ul>
                             </div>
                         </div>` 

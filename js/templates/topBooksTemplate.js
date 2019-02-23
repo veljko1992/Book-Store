@@ -12,7 +12,7 @@ $.getJSON("json/books.json", function (result) {
                               <ul>
                                 <li>${topBook[i].name}</li>
                                 <li>${topBook[i].price}</li>
-                                <li><a href="">Kupite</a></li>
+                                <li id="addItem"><a href="">Kupite</a></li>
                               </ul>
                             </div>
                         </div>` 
@@ -21,3 +21,4 @@ $.getJSON("json/books.json", function (result) {
 
     $topBooksWrapper.html(topItems);
 });
+
