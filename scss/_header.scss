@@ -35,26 +35,67 @@ header {
         position: relative;
         border-bottom: 1px solid black;
         background-color: white;
-    }
-    a{
-        color: black;
-        font-size: 20px;
-    }
-    nav {
-        display: none;
-
-        ul {
-            position: absolute;
-            top: 100px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            padding: 0;
-            li {
-                margin-bottom: 10px;
+        #logo {
+            display: inline-block;
+            margin-left: 15px;
+            font-weight: bold;
+            a{
+                font-size: 25px;
             }
-            a:hover{
-     
+        }
+        nav {
+            display: none;
+    
+            ul {
+                position: absolute;
+                top: 100px;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0;
+                li {
+                    margin-bottom: 10px;
+                }
+                li:first-child{
+                    position: relative;
+                }
+                li:first-child:hover #booksList{
+                    display: block;
+                }
+                a{
+                    font-size: 20px;
+                    display: block;
+                }
+                a:hover{
+                    color: red;
+                }
             }
+            #booksList{
+                display: none;
+                position: absolute;
+                z-index: 1;
+                // margin-top: 25px;
+                padding: 0 15px 15px;
+                background-color: white;
+                min-width: 300px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                a:hover{
+                    color: red;
+                }
+            }
+        }
+        .open {
+            position: fixed;
+            top: 140px;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            background-color: white;
+            border-right: 1px solid black; 
+            display: block;
+        }
+        
+        .small {
+            height: 60px;
         }
     }
     #shoppingCard{
@@ -127,28 +168,8 @@ header {
             transform: rotate(-135deg);
           }
     }          
-
-    #logo {
-        display: inline-block;
-        margin-left: 15px;
-        font-weight: bold;
-    }
 }
 
-.open {
-    position: fixed;
-    top: 140px;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    background-color: white;
-    border-right: 1px solid black; 
-    display: block;
-}
-
-.small {
-    height: 60px;
-}
 
 @media only screen and (min-width: 576px) {}
 
@@ -156,39 +177,37 @@ header {
 
 @media only screen and (min-width: 992px) {
     header {
-        nav {
-            height: 80px;
-            margin-right: 50px;
-            ul{
-                position: relative;
-                top: 50%;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-                li {
-                    margin-right: 20px;
-                    margin-bottom: 0;
+        #hederWrapper{
+            justify-content: space-between;
+            #logo {
+                width: 200px;
+            }
+            nav {
+                height: 80px;
+                margin-right: 50px;
+                ul{
+                    position: relative;
+                    top: 50%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    li {
+                        margin-right: 20px;
+                        margin-bottom: 0;
+                    }
+                    a{
+                        font-size: 20px;
+                    }
                 }
-                a{
-                    font-size: 20px;
+            }
+            .small {
+                #logo {
+                    width: 80px;
                 }
             }
         }
-        #hederWrapper{
-            justify-content: space-between;
-        }
         #shoppingCard{
             right: 20px;
-        }
-        #logo {
-            width: 200px;
-        }
-
-    }
-
-    .small {
-        #logo {
-            width: 80px;
         }
     }
 }
