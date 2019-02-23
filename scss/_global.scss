@@ -1,0 +1,18 @@
+@import '_variables';
+
+body{
+    padding-top: 140px;
+}
+.textWrapper{
+    margin-top: 20px;
+    ul{
+        padding: 0;
+        li:last-child{
+            background-color: $red;
+            border-radius: 3px;
+            a{
+                color: white;
+            }
+        }
+    }
+}
