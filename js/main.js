@@ -44,12 +44,9 @@
 //Kad kliknemo na link na navigaciju ako je manja od 992 nestaje
   navLi.on("click", function(e) {
     if (winWidth < 992 || nav.attr("class") == "open") {
-      e.preventDefault();
-
       if(e.target.textContent == 'KNJIGE'){
         if( $booksList.css('display') == 'none'){
           $booksList.css('display', 'block');
-          
         }else{
           $booksList.css('display', 'none');
         }
