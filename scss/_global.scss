@@ -1,41 +1,49 @@
-@import '_variables';
+@import "_variables";
 
-body{
-    padding-top: 140px;
+body {
+  padding-top: 140px;
 }
-h1, h2{
-    margin-bottom: 30px;
+h1,
+h2 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.bookSection {
+  padding-top: 20px;
+}
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+}
+.textWrapper {
+  margin-top: 20px;
+  ul {
+    padding: 0;
     text-align: center;
-}
-.bookSection{
-    padding-top: 20px;
-} 
-a{
-    color: black;
-}
-a:hover{
-    text-decoration: none;
-}
-.textWrapper{
-    margin-top: 20px;
-    ul{
-        padding: 0;
-        li:first-child{
-            margin-bottom: 10px;
-            height: 50px;
-            overflow: hidden;
-        }
-        li.itemPrice{
-            margin-bottom: 20px;
-        }
-        li:last-child{
-            background-color: $red;
-            border-radius: 3px;
-            a{
-                color: white;
-                display: block;
-                text-align: center;
-            }
-        }
+    li:first-child {
+      margin-bottom: 10px;
+      height: 50px;
+      overflow: hidden;
     }
+    li.itemPrice {
+      margin-bottom: 20px;
+    }
+    li:last-child {
+      background-color: $red;
+      border-radius: 3px;
+      &:hover {
+          background-color: lighten($red, 5);
+      }
+      a {
+        color: white;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
+.d_none{
+  display: none;
 }
