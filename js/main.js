@@ -7,7 +7,7 @@ $(document).ready(function() {
   var $booksLink = $("#booksLink");
   var $booksList = $("#booksList");
 
-  //Provera sirine ekrana ako je veca od 992 navigacija se vidi, a ako je manja sakrivena je
+  //Checking the screen width if more than 992 navigation is visible, and if smaller it is hidden
   if (winWidth >= 992) {
     nav.css("display", "block");
     menuBtn.css("display", "none");
@@ -15,7 +15,7 @@ $(document).ready(function() {
     nav.css("display", "none");
     menuBtn.css("display", "block");
   }
-  //Kada resajzujemo window ako je vece od 992 navigacija se idi, a ako je manja nav se ne vidi sklanja se i iksic
+  //When we resize the window if more than 992 navigation is gone, and if less is not visible, x is also removed
   $(window).resize(function() {
     winWidth = $(window).width();
     if (winWidth >= 992) {
@@ -28,7 +28,7 @@ $(document).ready(function() {
       nav.removeClass("open");
     }
   });
-  //Kad kliknemo na iksic pojavljuje se i nestaje navigacija
+  //When we click on x, navigation appears and disappears
   menuBtn.on("click", function() {
     if ($(nav).attr("class") == "open") {
       $("#menu-btn span").removeClass("bOpen");
@@ -42,7 +42,7 @@ $(document).ready(function() {
       nav.addClass("open");
     }
   });
-  //Kad kliknemo na link na navigaciju ako je manja od 992 nestaje
+  //When we click on a link to navigation if it is less than 992 disappears
   navLi.on("click", function(e) {
     if (winWidth < 992 || nav.attr("class") == "open") {
       if (e.target.textContent == "KNJIGE") {
@@ -66,9 +66,7 @@ $(document).ready(function() {
 
   $("nav .navigation-link").on("click", function(e) {
     sectionID = $(this).attr("href");
-    // console.log(sectionID);
     sectionPosition = $(sectionID).offset().top - navHeight;
-    // console.log(sectionPosition);
     $("html, body").animate(
       {
         scrollTop: sectionPosition
