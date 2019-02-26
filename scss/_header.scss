@@ -115,6 +115,21 @@ header {
         font-size: 30px;
         position: absolute;
         right: 80px;
+        #numberArticleWrapper{
+            position: relative;
+            #numberArticle {
+                text-align: center;
+                line-height: 25px;
+                font-size: 15px;
+                background: red;
+                color: #fff;
+                border-radius: 50%;
+                width: 25px;
+                height: 25px;
+                position: absolute;
+                bottom: 0px;
+              }
+        }
     }
 
     #menu-btn {

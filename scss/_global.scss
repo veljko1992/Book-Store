@@ -3,6 +3,13 @@
 body{
     padding-top: 140px;
 }
+h1, h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+.bookSection{
+    padding-top: 20px;
+} 
 a{
     color: black;
 }
@@ -18,11 +25,16 @@ a:hover{
             height: 50px;
             overflow: hidden;
         }
+        li.itemPrice{
+            margin-bottom: 20px;
+        }
         li:last-child{
             background-color: $red;
             border-radius: 3px;
             a{
                 color: white;
+                display: block;
+                text-align: center;
             }
         }
     }

@@ -10,9 +10,9 @@ $.getJSON("json/books.json", function (result) {
                         <div class="imgWrapper"><img src="img/${newBook[i].img}" alt="" class="img-fluid"></div>
                             <div class="textWrapper">
                               <ul>
-                                <li>${newBook[i].name}</li>
-                                <li>${newBook[i].price}</li>
-                                <li id="addItem"><a href="">Kupite</a></li>
+                                <li class="itemName">${newBook[i].name}</li>
+                                <li class="itemPrice">${newBook[i].price}</li>
+                                <li><a class="addItem" href="">Kupite</a></li>
                               </ul>
                             </div>
                         </div>` 
