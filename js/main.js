@@ -23,13 +23,11 @@ $(document).ready(function() {
     if (winWidth >= 992) {
       nav.css("display", "block");
       menuBtn.css("display", "none");
-      $booksList.removeClass('d_none');
     } else {
       nav.css("display", "none");
       menuBtn.css("display", "block");
       $("#menu-btn span").removeClass("bOpen");
       nav.removeClass("open");
-      $booksList.addClass('d_none');
     }
   });
   //When we click on x, navigation appears and disappears
@@ -39,11 +37,11 @@ $(document).ready(function() {
       nav.fadeOut(400, function() {
         nav.removeClass("open");
       });
-      $booksList.css("display", "none");
     } else {
       $("#menu-btn span").addClass("bOpen");
       nav.fadeIn(400);
       nav.addClass("open");
+      $booksList.addClass('d_none');
     }
   });
   //When we click on a link to navigation if it is less than 992 disappears
@@ -60,7 +58,6 @@ $(document).ready(function() {
         nav.fadeOut(400, function() {
           nav.removeClass("open");
         });
-        $booksList.css("display", "none");
       }
     }
   });
