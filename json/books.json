@@ -1,57 +1,58 @@
 [
     {
-        "name" : "Proba 1",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
+        "name" : "Agape 2",
+        "price" : "484,00 RSD",
+        "img" : "agape2.jpg",
         "atribute" : "new",
-        "categorie" : "computer"
+        "categorie" : "social",
+        "description" : "Knjiga Agape 2 je nastavak prvog dela ove knjige nastale na osnovu razgovora vođenih u serijalu Agape Studija B. TEME: Život i smrt – gosti: Vladeta Jerotić, Miloš Vesin Ljubav - gosti: Vladeta Jerotić, Vladika Porfirije, Zoran Jelisavčić Liturgija - gosti: Vladeta Jerotić, V..."
     },
     {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
+        "name" : "Agape 1",
+        "price" : "484,00 RSD",
+        "img" : "agape1.jpg",
         "atribute" : "top",
-        "categorie" : "economy"
+        "categorie" : "social",
+        "description" : "Na osnovu razgovora vođenih u serijalu Agape Studija B. TEME: Tesna su vrata koja vode u život – gost: Patrijarh Pavle Smisao - gosti: Vladeta Jerotić, Nenad Ilić, Milan Ćirković, Zagorka Golubović Vera - gosti: Vladeta Jerotić, Nikola Tucić Brak - gosti: Vladeta Jerotić, Ves.."
     },
     {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
+        "name" : "ISTORIJA SREDNJOVEKOVNOG SVETA I",
+        "price" : "1.189,15 RSD",
+        "img" : "istorijass1.jpg",
         "atribute" : "sales",
-        "categorie" : "medicine"
+        "categorie" : "socila",
+        "description" : "Od Konstantinove hristijanizacije do naslednika proroka Muhameda. Izuzetna istorija srednjeg veka u dva toma, doba u kojem je religija postala oružje kraljeva širom sveta. U Istoriji starog sveta Suzan Vajs Bauer je pisala o rađanju kraljevstava na osnovu moći. Ali u godinama... "
     },
     {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
-        "categorie" : "social"
-    },
-    {
-        "name" : "Proba 2",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
+        "name" : "KRITIKA PRAKTIČKOG UMA",
+        "price" : "797,50 RSD",
+        "img" : "kritikaUma.jpg",
+        "categorie" : "social",
         "atribute" : "new",
-        "categorie" : "computer"
+        "description" : "/"
     },
     {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
+        "name" : "JEZIK NOVIH MEDIJA",
+        "price" : "1.584,00 RSD",
+        "img" : "jezikNm.jpg",
+        "categorie" : "social",
         "atribute" : "top",
-        "categorie" : "economy"
+        "description" : "Kao prva detaljna i sveobuhvatna analiza vizuelne estetike novih medija, ova knjiga postavlja nove medije unutar istorije vizuelne kulture, ukazujući na veze i različitosti između novih i starih medija. Nalazeći poreklo estetike novih medija u slikarstvu, fotografiji, filmu i..."
     },
     {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
+        "name" : "SVETO I PROPADLJIVO",
+        "price" : "1.584,00 RSD",
+        "img" : "svetoIp.jpg",
+        "categorie" : "social",
         "atribute" : "sales",
-        "categorie" : "medicine"
+        "description" : "Prоmеnа u оdnоsu prеmа tеlu kојu је dоnеlо sаvrеmеnо dоbа, u vеlikоm dеlu društаvа dаnаšnjеg svеtа izmеnilа је оptiku krоz kојu sе sаglеdаvа tеlеsnо, a оvа prоmеnа pаrаdigmе uticаlа је i nа istrаživаnjа kоја sе bаvе shvаtаnjеm mеstа i ulоgе tеlа unutаr hrišćаnskе istоriје. Upu..."
     },
     {
-        "name" : "ANDROID 9 KOTLIN I ANDROID STUDIO 3.2 u jednoj knjizi",
-        "price" : "2.860,00 RSD",
-        "img" : "b1.jpg",
-        "categorie" : "social"
+        "name" : "INTELEKTUALNI ŠARLATANI",
+        "price" : "712,80 RSD",
+        "img" : "intelektualniS.jpg",
+        "categorie" : "social",
+        "atribute" : "new",
+        "description" : "Da li postmoderni intelektualci zloupotrebljavaju nauku? Godine 1996, u popularnom naučnom časopisu Soušel tekst, eminentni fizičar i univerzitetski profesor Alan Sokal objavio je pompezan i poprilično besmislen tekst pod nazivom „Prevazilaženje granica: ka transformativno...."
     }
-
 ]

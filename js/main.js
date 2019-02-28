@@ -197,6 +197,7 @@ $(document).ready(function() {
     if (item == null) {
       $shoppingListItems.append('<p id="empty">Shoping lista je prazna</p>');
     } else {
+      //Cart_content
       var table = `<h2>Vaši artikli</h2>`;
       table += `<table>`;
       for (i = 0; i < item.length; i++) {
