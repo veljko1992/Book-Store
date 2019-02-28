@@ -71,9 +71,6 @@ header {
                 li:first-child{
                     position: relative;
                 }
-                li:first-child:hover #booksList{
-                    display: block;
-                }
                 a{
                     font-size: 20px;
                     display: block;
@@ -86,7 +83,6 @@ header {
                 }
             }
             #booksList{
-                display: none;
                 position: absolute;
                 z-index: 1;
                 padding: 0 15px 15px;
@@ -225,6 +221,9 @@ header {
                     span{
                         line-height: 80px;
                     }
+                    li:first-child:hover #booksList{
+                        display: block;
+                    }
                     li {
                         margin-right: 20px;
                         margin-bottom: 0;
@@ -232,6 +231,9 @@ header {
                     a{
                         font-size: 20px;
                     }
+                }
+                #booksList{
+                    display: none;
                 }
             }
             .small {

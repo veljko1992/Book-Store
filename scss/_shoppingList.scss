@@ -8,23 +8,57 @@
     z-index: 20;
     display: none;
     #shoppingListWrapper{
-        width: 80%;
+        width: 100%;
         z-index: 21;
         background-color: white;
         margin: 0 auto;
         margin-top: 30px;
         text-align: center;
         min-height: 300px;
+        max-height: 500px;
         position: relative;
         border-radius: 3px;
+        overflow-y: scroll;
         p{
             padding-top: 50px;
         }
+        #shoppingListItems{
+            padding: 50px 15px 100px;
+            h2{
+           
+            }
+            table{
+                border: 1px solid black;
+                width: 100%;
+                margin: 0 auto;
+                text-align: left;
+                td{
+                    border: 1px solid black;
+                    padding: 5px 5px;
+                    font-size: 14px;
+                }
+            }
+            #tbWrapper{
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 20px;
+                #totalBill{
+                    border: 1px dashed black;
+                    padding: 15px;
+                    display: inline-block;
+                }
+            }
+        }
     }
 }
+.exitWrapper{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
 .exit{
-    position: absolute;
-    right: 0;
+    position: fixed;
     display: inline;
     width: 25px;
     height: 25px;
@@ -65,3 +99,16 @@
         transform: rotate(-135deg);
       }
 }
+@media only screen and (min-width: 576px) { }
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {
+    #shoppingList{
+        #shoppingListWrapper{
+            width: 80%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) {}

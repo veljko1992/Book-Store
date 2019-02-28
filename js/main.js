@@ -11,9 +11,11 @@ $(document).ready(function() {
   if (winWidth >= 992) {
     nav.css("display", "block");
     menuBtn.css("display", "none");
+    $booksList.removeClass('d_none');
   } else {
     nav.css("display", "none");
     menuBtn.css("display", "block");
+    $booksList.addClass('d_none');
   }
   //When we resize the window if more than 992 navigation is gone, and if less is not visible, x is also removed
   $(window).resize(function() {
@@ -21,11 +23,13 @@ $(document).ready(function() {
     if (winWidth >= 992) {
       nav.css("display", "block");
       menuBtn.css("display", "none");
+      $booksList.removeClass('d_none');
     } else {
       nav.css("display", "none");
       menuBtn.css("display", "block");
       $("#menu-btn span").removeClass("bOpen");
       nav.removeClass("open");
+      $booksList.addClass('d_none');
     }
   });
   //When we click on x, navigation appears and disappears
@@ -46,10 +50,10 @@ $(document).ready(function() {
   navLi.on("click", function(e) {
     if (winWidth < 992 || nav.attr("class") == "open") {
       if (e.target.textContent == "KNJIGE") {
-        if ($booksList.css("display") == "none") {
-          $booksList.css("display", "block");
+        if ($booksList.attr("class") == "d_none") {
+          $booksList.removeClass('d_none');
         } else {
-          $booksList.css("display", "none");
+          $booksList.addClass('d_none');
         }
       } else {
         $("#menu-btn span").removeClass("bOpen");
@@ -95,7 +99,7 @@ $(document).ready(function() {
     var bookName = target.parentElement.parentElement.children[0].textContent;
 
     var bookPrice = "";
-    for (i = 0; i < price.length; i++) {
+    for (i = 0; i < price.length - 7; i++) {
       if (price.charAt(i) >= 0 || price.charAt(i) <= 9) {
         bookPrice += price.charAt(i);
       }
@@ -196,7 +200,8 @@ $(document).ready(function() {
     if (item == null) {
       $shoppingListItems.append('<p id="empty">Shoping lista je prazna</p>');
     } else {
-      var table = `<table>`;
+      var table = `<h2>Vaši artikli</h2>`;
+      table += `<table>`;
       for (i = 0; i < item.length; i++) {
         table += `<tr>`;
         for (prop in item[i]) {
@@ -206,10 +211,26 @@ $(document).ready(function() {
         table += `</tr>`;
       }
       table += `</table>`;
+      table += `<div id="tbWrapper"><span id="totalBill">Ukupan račun je: </span></div>`;
       $shoppingListItems.html(table);
+     
+      $('#totalBill').append(localStorage.getItem("totalBill")).append('.00 RSD');
     }
     fetched = true;
     return;
   }
   //Push items to shoping card END
+
+  // Form 
+
+  var $activeForm = $('#activeForm');
+  var $exit2 = $('#exit2');
+
+  $activeForm.on('click', function(){
+    $('#writeToUs').css('display', 'block');
+  });
+
+  $exit2.on('click', function(){
+    $('#writeToUs').css('display', 'none ');
+  });
 });
