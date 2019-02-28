@@ -54,5 +54,53 @@
         "categorie" : "social",
         "atribute" : "new",
         "description" : "Da li postmoderni intelektualci zloupotrebljavaju nauku? Godine 1996, u popularnom naučnom časopisu Soušel tekst, eminentni fizičar i univerzitetski profesor Alan Sokal objavio je pompezan i poprilično besmislen tekst pod nazivom „Prevazilaženje granica: ka transformativno...."
+    },
+    {
+        "name" : "LIMFEDEM Savremena terapija",
+        "price" : "1.320,00 RSD",
+        "img" : "limfedem.jpg",
+        "categorie" : "medicine",
+        "atribute" : "top",
+        "description" : "Limfedem : savremena terapija limfedema i komplikacija"
+    },
+    {
+        "name" : "PSIHOTERAPIJA",
+        "price" : "1.584,00 RSD",
+        "img" : "psihoterapija.jpg",
+        "categorie" : "medicine",
+        "atribute" : "sales",
+        "description" : "Najistaknutiji domaći stručnjaci i nekadašnji beogradski studenti koji sada predaju u Londonu, Sent Luisu ili Sidneju, okupili su se da bi prikazali najvažnije trendove u psihoanalitičkim, kognitivno-bihevioralnim, odnosno grupnim i porodičnim pristupima psihoterapiji. Preth..."
+    },
+    {
+        "name" : "PRAKTIKUM I ATLAS IZ HISTOLOGIJE I EMBRIOLOGIJE",
+        "price" : "1.919,20 RSD",
+        "img" : "praktikumAtlas.jpg",
+        "categorie" : "medicine",
+        "atribute" : "new",
+        "description" : "/"
+    },
+    {
+        "name" : "ATLAS ANATOMIJE ČOVEKA VII izdanje",
+        "price" : "8.599,00 RSD",
+        "img" : "atlasCoveka.jpg",
+        "categorie" : "medicine",
+        "atribute" : "top",
+        "description" : "Neprevaziđen prikaz anatomije ljudskog tela u medicini i zdravstvu! Kao jedini atlas anatomije čoveka koji su ilustrovali lekari, 7. izdanje svetski poznate knjige Alas anatomije čoveka čitaocima donosi izuzetno precizne i jasne prikaze ljudskog tela iz kliničke perspektive. ..."
+    },
+    {
+        "name" : "praktikumAtlas",
+        "price" : "1.039,20 RSD",
+        "img" : "praktikumKlinicke.jpg",
+        "categorie" : "medicine",
+        "atribute" : "sales",
+        "description" : "3. izmenjeno i dopunjeno izdanje. Radiologija je poslednjih decenija doživela napredak kakav je doskora bilo nemoguće i naslutiti. Razvijene su klasične slikovne metode pregleda i uvedene nove (ehotomografija, kompjuterizovana tomografija, magnetna rezonanca), a već danas je ..."
+    },
+    {
+        "name" : "MOŽDANI UDAR Vodič za prevenciju lečenje i rehabilitaciju",
+        "price" : "339,15 RSD",
+        "img" : "mozdaniUdar.jpg",
+        "categorie" : "medicine",
+        "atribute" : "new",
+        "description" : "Moždani udar je treći uzrok smrtnosti u razvijenim zemljama sveta, posle kardiovaskularnih i malignih bolesti, a drugi uzrok smrtnosti u celom svetu i, istovremeno, drugi najčešći uzrok demencije, najčešći uzrok epilepsije u starijih i čest uzrok depresije. Srbija se ubraja me... "
     }
 ]
