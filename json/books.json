@@ -102,5 +102,53 @@
         "categorie" : "medicine",
         "atribute" : "new",
         "description" : "Moždani udar je treći uzrok smrtnosti u razvijenim zemljama sveta, posle kardiovaskularnih i malignih bolesti, a drugi uzrok smrtnosti u celom svetu i, istovremeno, drugi najčešći uzrok demencije, najčešći uzrok epilepsije u starijih i čest uzrok depresije. Srbija se ubraja me... "
+    },
+    {
+        "name" : "KORPORATIVNO LOBIRANJE U EVROPSKOJ UNIJI",
+        "price" : "1.280,00 RSD",
+        "img" : "korporativnoBankarstvo.jpg",
+        "categorie" : "economy",
+        "atribute" : "sales",
+        "description" : "Knjiga će biti korisna kako privrednicima, konsultantima i lobistima tako i političarima te studentima – pogotovo poslovnih škola, ekonomskih i fakulteta sociologije i političkih nauka. Ona će biti korisna i novinarima, koji često u lobiranju vide samo negativno i često ga izj..."
+    },
+    {
+        "name" : "ISLAMSKO BANKARSTVO Teorija i praksa",
+        "price" : "528,00 RSD",
+        "img" : "islamskoBankarstvo.jpg",
+        "categorie" : "economy",
+        "atribute" : "top",
+        "description" : "Tematski raspon sistemski široko postavljenog i čvrsto strukturisanog prikaza islamskog bankarstva u ovoj promišljeno komponovanoj, sveobuhvatnoj monografiji polazi od temeljnog pojmovno-terminološkog definisanja osnovnih koncepata šerijatskog prava u ovoj oblasti, da bi potom..."
+    },
+    {
+        "name" : "GLOBALIZACIJA I NJENE PROTIVREČNOSTI",
+        "price" : "1.742,40 RSD",
+        "img" : "globaizacijaProtivrecnosti.jpg",
+        "categorie" : "economy",
+        "atribute" : "new",
+        "description" : "U ovom novom proširenom i ključnom izdanju svog bestselera, čuveni ekonomista i dobitnik Nobelove nagrade Džozef J. Stiglic bavi se novim protivrečnostima globalizacije u Sjedinjenim Državama i Evropi. Odmah po objavljivanju, delo Globalizacija i njene protivrečnosti postalo..."
+    },
+    {
+        "name" : "NOVI EKONOMSKI MANIFEST",
+        "price" : "880,00 RSD",
+        "img" : "noviEkonoskiManifest.jpg",
+        "categorie" : "economy",
+        "atribute" : "top",
+        "description" : "Novi ekonomski manifest ~ put ka optimalnom razvoju Srbije: Ovaj program ili projekat, ili kako ga je autor nazvao „Novi ekonomski manifest“ je vrlo ozbiljna analiza, dubok i suštinski prodor u ogromne probleme privrede, društva i države, sa očitim naporom i željom autora da p..."
+    },
+    {
+        "name" : "HRONIKA TRANZICIONOG GROBLJA",
+        "price" : "1.584,00 RSD",
+        "img" : "hronikaTranz.jpg",
+        "categorie" : "economy",
+        "atribute" : "sales",
+        "description" : "Ova knjiga namenjena je svim budućim istraživačima srpske tranzicije i ekonomske degradacije društva krajem XX i početkom XXI veka. Njena knjiga namenjena je čitaocima kojima je stalo da dođu do prave istine i do traganja za njom."
+    },
+    {
+        "name" : "KADA NOVCA PONESTANE",
+        "price" : "1.759,20 RSD",
+        "img" : "kadaNovca.jpg",
+        "categorie" : "economy",
+        "atribute" : "new",
+        "description" : "KRAJ IMUĆNOG ZAPADA! ODABRANA ZA NAJBOLJU KNJIGU 2013. GODINE, PREMA IZBORU ECONOMISTA I FT-A! Nakon šest decenija ubrzano rastućeg životnog standarda, ekonomije Zapada su počele da stagniraju. Dok se političari i ekonomisti prepiru oko toga na koji način treba pokrenuti ekon..."
     }
 ]
