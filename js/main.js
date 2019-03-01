@@ -219,7 +219,6 @@ $(document).ready(function() {
   //Push items to shoping card END
 
   // Form 
-
   var $activeForm = $('#activeForm');
   var $exit2 = $('#exit2');
 
