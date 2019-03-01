@@ -11,11 +11,11 @@ $(document).ready(function() {
   if (winWidth >= 992) {
     nav.css("display", "block");
     menuBtn.css("display", "none");
-    $booksList.removeClass('d_none');
+    $booksList.removeClass("d_none");
   } else {
     nav.css("display", "none");
     menuBtn.css("display", "block");
-    $booksList.addClass('d_none');
+    $booksList.addClass("d_none");
   }
   //When we resize the window if more than 992 navigation is gone, and if less is not visible, x is also removed
   $(window).resize(function() {
@@ -41,7 +41,7 @@ $(document).ready(function() {
       $("#menu-btn span").addClass("bOpen");
       nav.fadeIn(400);
       nav.addClass("open");
-      $booksList.addClass('d_none');
+      $booksList.addClass("d_none");
     }
   });
   //When we click on a link to navigation if it is less than 992 disappears
@@ -49,9 +49,9 @@ $(document).ready(function() {
     if (winWidth < 992 || nav.attr("class") == "open") {
       if (e.target.textContent == "KNJIGE") {
         if ($booksList.attr("class") == "d_none") {
-          $booksList.removeClass('d_none');
+          $booksList.removeClass("d_none");
         } else {
-          $booksList.addClass('d_none');
+          $booksList.addClass("d_none");
         }
       } else {
         $("#menu-btn span").removeClass("bOpen");
@@ -177,12 +177,12 @@ $(document).ready(function() {
 
   //Push items to shoping card
 
-  var $shoppingCard = $("#shoppingCard");
+  var shoppingCart = $("#shoppingCart");
   var $shoppingList = $("#shoppingList");
   var $exit = $("#exit");
   var $shoppingListItems = $("#shoppingListItems");
 
-  $shoppingCard.on("click", function(e) {
+  shoppingCart.on("click", function(e) {
     $shoppingList.css("display", "block");
     listItems();
   });
@@ -211,59 +211,124 @@ $(document).ready(function() {
       table += `</table>`;
       table += `<div id="tbWrapper"><span id="totalBill">Ukupan račun je: </span></div>`;
       $shoppingListItems.html(table);
-     
-      $('#totalBill').append(localStorage.getItem("totalBill")).append('.00 RSD');
+
+      $("#totalBill")
+        .append(localStorage.getItem("totalBill"))
+        .append(".00 RSD");
     }
     fetched = true;
     return;
   }
   //Push items to shoping card END
 
-  // Form 
-  var $activeForm = $('#activeForm');
-  var $exit2 = $('#exit2');
+  // Form
+  var $activeForm = $("#activeForm");
+  var $exit2 = $("#exit2");
 
-  $activeForm.on('click', function(){
-    $('#writeToUs').css('display', 'block');
+  $activeForm.on("click", function() {
+    $("#writeToUs").css("display", "block");
   });
 
-  $exit2.on('click', function(){
-    $('#writeToUs').css('display', 'none ');
+  $exit2.on("click", function() {
+    $("#writeToUs").css("display", "none ");
+    $mistakes.removeClass('success');
+    $mistakes.removeClass('faild');
+    $mistakes.empty();
   });
 
-var textarea = document.querySelector('textarea');
+  var textarea = document.querySelector("textarea");
 
-textarea.addEventListener('keydown', autosize);
-             
-function autosize(){
-  var el = this;
-  setTimeout(function(){
-    el.style.cssText = 'height:auto; padding:0';
-    el.style.cssText = 'height:' + el.scrollHeight + 'px';
-  },0);
-}
+  textarea.addEventListener("keydown", autosize);
 
-var $inputs = $('input');
-var $labels = $('label')
+  function autosize() {
+    var el = this;
+    setTimeout(function() {
+      el.style.cssText = "height:auto; padding:0";
+      el.style.cssText = "height:" + el.scrollHeight + "px";
+    }, 0);
+  }
 
-$inputs.on('click', function(e){
-  var tar = e.target;
-  var label = tar.previousSibling.previousSibling.previousSibling;
-  label.classList.remove("d_none");
-});
-$inputs.on('blur', function(){
-  $labels.addClass('d_none');
-});
+  var $inputs = $("input");
+  var $labels = $("label");
 
+  $inputs.on("click", function(e) {
+    var tar = e.target;
+    var label = tar.previousSibling.previousSibling.previousSibling;
+    label.classList.remove("d_none");
+  });
+  $inputs.on("blur", function() {
+    $labels.addClass("d_none");
+  });
 
-$('textarea').on('click', function(e){
-  var tar = e.target;
-  var label = tar.previousSibling.previousSibling.previousSibling;
-  label.classList.remove("d_none");
-});
+  $("textarea").on("click", function(e) {
+    var tar = e.target;
+    var label = tar.previousSibling.previousSibling.previousSibling;
+    label.classList.remove("d_none");
+  });
 
-$('textarea').on('blur', function(){
-  $labels.addClass('d_none');
-});
+  $("textarea").on("blur", function() {
+    $labels.addClass("d_none");
+  });
 
+  //Validation form
+  var $form = $("#form");
+  var $mistakes = $("#mistakes");
+
+  $form.on("submit", (e)=> {
+    e.preventDefault();
+    $mistakes.empty();
+    checkForm();
+  });
+
+  function checkForm() {
+    if(filledName() && filledEmail() && filledText() ){
+      $mistakes.addClass('success');
+      $mistakes.html("Uspesno ste poslali poruku.");
+      $('#name, #email').val('');
+      $("textarea").val('');
+      return true;
+    }else{
+      return false;
+    }
+    
+  }
+
+  function filledName() {
+    var name = $("#name").val();
+
+    if (name.trim().length == 0) {
+      $mistakes.removeClass('success');
+      $mistakes.addClass('faild');
+      $mistakes.html("Nije uneto ime.");
+      return false;
+    }
+
+    return true;
+  }
+
+  function filledEmail() {
+    var email = $("#email").val().trim();
+
+    r = new RegExp("[a-z0-9]+@([a-z0-9]+\\.)+[a-z]+");
+    if (r.test(email) == false) {
+      $mistakes.removeClass('success');
+      $mistakes.addClass('faild');
+      $mistakes.html("Neispravna imejl adresa.");
+      return false;
+    }
+    return true;
+  }
+
+  function filledText() {
+    var text = $("textarea").val();
+
+    if (text.trim().length == 0) {
+      $mistakes.removeClass('success');
+      $mistakes.addClass('faild');
+      $mistakes.html("Nije uneta poruka.");
+      return false;
+    }
+
+    return true;
+  }
 });

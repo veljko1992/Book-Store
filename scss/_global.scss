@@ -47,3 +47,15 @@ a:hover {
 .d_none{
   display: none;
 }
+.faild{
+  color: $red;
+  border: 1px solid $red;
+}
+.success{
+  color: green;
+  border: 1px solid green;
+}
+.faild, .success{
+  padding: 5px 15px;
+  border-radius: 3px;
+}
