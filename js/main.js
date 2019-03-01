@@ -230,4 +230,40 @@ $(document).ready(function() {
   $exit2.on('click', function(){
     $('#writeToUs').css('display', 'none ');
   });
+
+var textarea = document.querySelector('textarea');
+
+textarea.addEventListener('keydown', autosize);
+             
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+  },0);
+}
+
+var $inputs = $('input');
+var $labels = $('label')
+
+$inputs.on('click', function(e){
+  var tar = e.target;
+  var label = tar.previousSibling.previousSibling.previousSibling;
+  label.classList.remove("d_none");
+});
+$inputs.on('blur', function(){
+  $labels.addClass('d_none');
+});
+
+
+$('textarea').on('click', function(e){
+  var tar = e.target;
+  var label = tar.previousSibling.previousSibling.previousSibling;
+  label.classList.remove("d_none");
+});
+
+$('textarea').on('blur', function(){
+  $labels.addClass('d_none');
+});
+
 });

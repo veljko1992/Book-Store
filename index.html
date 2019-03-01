@@ -85,18 +85,31 @@
             <!-- Sales books template -->
           </div>
         </div>
+
         <!-- Write to us -->
         <button id="activeForm">Pišite nam</button>
+
         <div id="writeToUs">
-        <div class="exitWrapper">
-          <div id="exit2" class="exit"><span></span> <span></span></div>
-        </div>
-          <form action="">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A eius, natus quaerat alias fuga dolores sint consequatur sequi. Eligendi aspernatur ad ut in incidunt vitae maiores magni itaque libero delectus similique earum cum sit dolores sed, culpa deleniti cupiditate architecto, tempora dicta atque? Sequi vero minus fugiat laudantium a. Laboriosam!</p>
-          </form>
+          <div id="formWrapper">
+              <div class="exitWrapper">
+                  <div id="exit2" class="exit"><span></span> <span></span></div>
+                </div>
+            <form id="form" action="">
+              <h2>Pišite nam</h2>
+              <p id="mistakes"></p>
+              <label for="name" class="d_none">Ime:</label><br>
+              <input type="text" id="name" name="name" placeholder="Petar Petrovic"><br>
+              <label for="email" class="d_none">Imejl:</label><br>
+              <input type="email" id="email" name="email" placeholder="primer@primer.com"><br>
+              <label for="msg" class="d_none">Poruka:</label><br>
+              <textarea name="msg" id="msg" name="msg" rows="1" placeholder="Poruka..."></textarea><br>
+              <input id="btn" type="submit" value="Pošalji">
+            </form>
+          </div>
         </div>
       </div>
     </main>
+
     <!-- Footer -->
     <footer>
       <div class="countainer">

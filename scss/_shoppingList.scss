@@ -7,6 +7,8 @@
     background-color: rgba(0,0,0, 0.8);
     z-index: 20;
     display: none;
+    overflow-y: scroll;
+    padding-bottom: 100px;
     #shoppingListWrapper{
         width: 100%;
         z-index: 21;
@@ -15,15 +17,13 @@
         margin-top: 30px;
         text-align: center;
         min-height: 300px;
-        max-height: 500px;
         position: relative;
         border-radius: 3px;
-        overflow-y: scroll;
         p{
             padding-top: 50px;
         }
         #shoppingListItems{
-            padding: 50px 15px 100px;
+            padding: 30px 15px 100px;
             h2{
            
             }
@@ -52,25 +52,31 @@
     }
 }
 .exitWrapper{
-    position: relative;
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 .exit{
-    position: fixed;
+    position: relative;
     display: inline;
     width: 25px;
     height: 25px;
     cursor: pointer;
-    background-color: $red;
+    background-color: lightslategrey;
     border-radius: 3px;
+    &:hover{
+        background-color: $red;
+        span{
+            background: white;
+            transition: 0s ease-in-out;
+        }
+    }
     span{
         display: block;
         position: absolute;
         height: 4px;
         width: 100%;
-        background: white;
+        background: black;
         border-radius: 9px;
         opacity: 1;
         left: 0;
