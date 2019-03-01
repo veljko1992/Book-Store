@@ -142,7 +142,7 @@ $(document).ready(function() {
   function checkNumArticle() {
     var chechNumArticle = localStorage.getItem("numArticle");
 
-    if (chechNumArticle == null) {
+    if (chechNumArticle == null || chechNumArticle == 0) {
       $numberArticle.addClass("d_none");
     } else {
       $numberArticle.removeClass("d_none");
@@ -197,29 +197,94 @@ $(document).ready(function() {
     if (item == null) {
       $shoppingListItems.append('<p id="empty">Shoping lista je prazna</p>');
     } else {
-      //Cart_content
-      var table = `<h2>Vaši artikli</h2>`;
-      table += `<table>`;
-      for (i = 0; i < item.length; i++) {
-        table += `<tr>`;
-        for (prop in item[i]) {
-          console.log(item[i][prop]);
-          table += `<td>${item[i][prop]}</td>`;
-        }
-        table += `</tr>`;
-      }
-      table += `</table>`;
-      table += `<div id="tbWrapper"><span id="totalBill">Ukupan račun je: </span></div>`;
-      $shoppingListItems.html(table);
-
-      $("#totalBill")
-        .append(localStorage.getItem("totalBill"))
-        .append(".00 RSD");
+      createTable(item);
     }
     fetched = true;
     return;
   }
+
+  function createTable(item) {
+    var table = `<h2>Vaši artikli</h2>`;
+    table += `<table>`;
+    for (i = 0; i < item.length; i++) {
+      table += `<tr>`;
+      table += `<td>${i + 1}.</td>`;
+      for (prop in item[i]) {
+        if(prop == 'id'){
+          table += `<td>id: ${item[i][prop]}</td>`;
+        }
+        if(prop == 'name'){
+          table += `<td>${item[i][prop]}</td>`;
+        }
+        if(prop == 'price'){
+          table += `<td>${item[i][prop]},00 RSD</td>`;
+        }
+      }
+      table += `<td><button class="faild">Obriši</button></td>`;
+      table += `</tr>`;
+    }
+    table += `</table>`;
+    table += `<div id="tbWrapper"><span id="totalBill">Ukupan račun je: </span></div>`;
+    $shoppingListItems.html(table);
+
+    $("#totalBill")
+      .append(localStorage.getItem("totalBill"))
+      .append(".00 RSD");
+  }
+//Old code
+  // function createTable(item) {
+  //   //Cart_content
+  //   var table = `<h2>Vaši artikli</h2>`;
+  //   table += `<table>`;
+  //   for (i = 0; i < item.length; i++) {
+  //     table += `<tr>`;
+  //     for (prop in item[i]) {
+  //       console.log(item[i][prop]);
+  //       table += `<td>${item[i][prop]}</td>`;
+  //     }
+  //     table += `<td><button class="faild">Obriši</button></td>`;
+  //     table += `</tr>`;
+  //   }
+  //   table += `</table>`;
+  //   table += `<div id="tbWrapper"><span id="totalBill">Ukupan račun je: </span></div>`;
+  //   $shoppingListItems.html(table);
+
+  //   $("#totalBill")
+  //     .append(localStorage.getItem("totalBill"))
+  //     .append(".00 RSD");
+  // }
+
   //Push items to shoping card END
+
+  //Delete items
+  $shoppingListItems.on('click', function(e){
+    var tar = e.target.parentElement.parentElement.children;
+    var strId = tar[1].textContent;
+    var id = '';
+    for (i = 0; i < strId.length; i++) {
+      if (strId.charAt(i) >= 0 || strId.charAt(i) <= 9) {
+        id += strId.charAt(i);
+      }
+    }
+    id = parseInt(id);
+    var item = fetch();
+    console.log(item);
+
+    item = item.filter(item => item.id != id);
+    localStorage.clear();
+    console.log(item);
+    to_push = JSON.stringify(item);
+    localStorage.setItem("countItems", to_push);
+    listItems();
+    localStorage.setItem("numArticle", item.length);
+    checkNumArticle();
+    if(item.length == 0){
+      localStorage.clear();
+      $shoppingListItems.empty();
+      listItems();
+    }
+  });
+
 
   // Form
   var $activeForm = $("#activeForm");
@@ -231,8 +296,8 @@ $(document).ready(function() {
 
   $exit2.on("click", function() {
     $("#writeToUs").css("display", "none ");
-    $mistakes.removeClass('success');
-    $mistakes.removeClass('faild');
+    $mistakes.removeClass("success");
+    $mistakes.removeClass("faild");
     $mistakes.empty();
   });
 
@@ -274,31 +339,30 @@ $(document).ready(function() {
   var $form = $("#form");
   var $mistakes = $("#mistakes");
 
-  $form.on("submit", (e)=> {
+  $form.on("submit", e => {
     e.preventDefault();
     $mistakes.empty();
     checkForm();
   });
 
   function checkForm() {
-    if(filledName() && filledEmail() && filledText() ){
-      $mistakes.addClass('success');
+    if (filledName() && filledEmail() && filledText()) {
+      $mistakes.addClass("success");
       $mistakes.html("Uspesno ste poslali poruku.");
-      $('#name, #email').val('');
-      $("textarea").val('');
+      $("#name, #email").val("");
+      $("textarea").val("");
       return true;
-    }else{
+    } else {
       return false;
     }
-    
   }
 
   function filledName() {
     var name = $("#name").val();
 
     if (name.trim().length == 0) {
-      $mistakes.removeClass('success');
-      $mistakes.addClass('faild');
+      $mistakes.removeClass("success");
+      $mistakes.addClass("faild");
       $mistakes.html("Nije uneto ime.");
       return false;
     }
@@ -307,12 +371,14 @@ $(document).ready(function() {
   }
 
   function filledEmail() {
-    var email = $("#email").val().trim();
+    var email = $("#email")
+      .val()
+      .trim();
 
     r = new RegExp("[a-z0-9]+@([a-z0-9]+\\.)+[a-z]+");
     if (r.test(email) == false) {
-      $mistakes.removeClass('success');
-      $mistakes.addClass('faild');
+      $mistakes.removeClass("success");
+      $mistakes.addClass("faild");
       $mistakes.html("Neispravna imejl adresa.");
       return false;
     }
@@ -323,8 +389,8 @@ $(document).ready(function() {
     var text = $("textarea").val();
 
     if (text.trim().length == 0) {
-      $mistakes.removeClass('success');
-      $mistakes.addClass('faild');
+      $mistakes.removeClass("success");
+      $mistakes.addClass("faild");
       $mistakes.html("Nije uneta poruka.");
       return false;
     }
