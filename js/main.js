@@ -126,6 +126,7 @@ $(document).ready(function() {
     countItem.id = numArticle;
     countItem.name = bookName;
     countItem.price = bookPrice;
+    countItem.quantity = 1;
     
   
     addItem(countItem);
@@ -156,10 +157,27 @@ $(document).ready(function() {
     fetched = false;
     var countItems = [];
     var item = fetch();
+    var ima = false;
+  console.log(countItem);
   
     if (item != null) { 
-      item.push(countItem);
-      to_push = JSON.stringify(item);
+      item.forEach(el => {
+        if(el.name == countItem.name){
+          el.quantity ++
+          ima = true;
+        }
+      });
+      console.log(ima);
+      
+      if(ima){
+        console.log('usao');
+        localStorage.clear();
+        to_push = JSON.stringify(item);
+        localStorage.setItem("countItems", to_push);
+      } else{
+        item.push(countItem);
+        to_push = JSON.stringify(item);
+      }
     } else {
       countItems.push(countItem);
       to_push = JSON.stringify(countItems);
@@ -208,15 +226,18 @@ $(document).ready(function() {
   function createTable(item) {
     var table = `<h2>Vaši artikli</h2>`;
     table += `<table>`;
-    table += `<tr><td>Br.</td><td>Id.</td><td>Naziv</td><td>Cena</td>`;
+    table += `<tr><td>Br.</td><td>ID</td><td>Naziv</td><td>Cena</td><td>Količina</td>`;
     for (i = 0; i < item.length; i++) {
       table += `<tr>`;
       table += `<td>${i + 1}.</td>`;
       for (prop in item[i]) {
         if(prop == 'id'){
-          table += `<td>id: ${item[i][prop]}</td>`;
+          table += `<td>${item[i][prop]}</td>`;
         }
         if(prop == 'name'){
+          table += `<td>${item[i][prop]}</td>`;
+        }
+        if(prop == 'quantity'){
           table += `<td>${item[i][prop]}</td>`;
         }
         if(prop == 'price'){
@@ -240,6 +261,7 @@ $(document).ready(function() {
   $shoppingListItems.on('click', function(e){
     var tar = e.target.parentElement.parentElement.children;
     var strId = tar[1].textContent;
+    var name = tar[2].textContent;
     var price = parseInt(tar[3].textContent);
 
     var id = '';
@@ -251,7 +273,7 @@ $(document).ready(function() {
     id = parseInt(id);
     var item = fetch();
     
-    item = item.filter(item => item.id != id);
+    item = item.filter(item => item.name != name);
     
     var tb = parseInt(localStorage.getItem('totalBill'));
     var newTb = tb - price;
