@@ -84,17 +84,16 @@ $(document).ready(function() {
   var $numberArticle = $("#numberArticle");
 
   var countItem = {};
-  var countItems = [];
+ 
   var fetched = false;
 
   $addItemButton.on("click", function(e) {
-    e.preventDefault();
-
+  
     var target = e.target;
     var price =
-      target.parentElement.previousSibling.previousSibling.textContent;
-    var bookName = target.parentElement.parentElement.children[0].textContent;
-
+      target.previousSibling.previousSibling.textContent;
+    var bookName = target.parentElement.children[0].textContent;
+   
     var bookPrice = "";
     for (i = 0; i < price.length - 7; i++) {
       if (price.charAt(i) >= 0 || price.charAt(i) <= 9) {
@@ -103,10 +102,10 @@ $(document).ready(function() {
     }
     bookPrice = parseInt(bookPrice);
 
-    numArticle = localStorage.getItem("numArticle");
+    var numArticle = localStorage.getItem("numArticle");
 
     if (numArticle == null) {
-      numArticle = 1;
+      numArticle = parseInt(1);
     } else {
       newNumb = parseInt(numArticle);
       newNumb += 1;
@@ -127,7 +126,7 @@ $(document).ready(function() {
     countItem.id = numArticle;
     countItem.name = bookName;
     countItem.price = bookPrice;
-
+  
     addItem(countItem);
 
     localStorage.setItem("totalBill", totalBill);
@@ -154,15 +153,17 @@ $(document).ready(function() {
   // Add items to local sotorage
   function addItem(countItem) {
     fetched = false;
+    var countItems = [];
     var item = fetch();
-
-    if (item != null) {
+  
+    if (item != null) { 
       item.push(countItem);
       to_push = JSON.stringify(item);
     } else {
       countItems.push(countItem);
       to_push = JSON.stringify(countItems);
     }
+  
     localStorage.setItem("countItems", to_push);
     return;
   }
@@ -268,11 +269,10 @@ $(document).ready(function() {
     }
     id = parseInt(id);
     var item = fetch();
-    console.log(item);
-
+    
     item = item.filter(item => item.id != id);
     localStorage.clear();
-    console.log(item);
+    
     to_push = JSON.stringify(item);
     localStorage.setItem("countItems", to_push);
     listItems();
