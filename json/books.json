@@ -88,7 +88,7 @@
         "description" : "Neprevaziđen prikaz anatomije ljudskog tela u medicini i zdravstvu! Kao jedini atlas anatomije čoveka koji su ilustrovali lekari, 7. izdanje svetski poznate knjige Alas anatomije čoveka čitaocima donosi izuzetno precizne i jasne prikaze ljudskog tela iz kliničke perspektive. ..."
     },
     {
-        "name" : "praktikumAtlas",
+        "name" : "PRAKTIKUM KLINIČKE RADIOLOGIJE",
         "price" : "1.039,20 RSD",
         "img" : "praktikumKlinicke.jpg",
         "categorie" : "medicine",
@@ -150,5 +150,69 @@
         "categorie" : "economy",
         "atribute" : "new",
         "description" : "KRAJ IMUĆNOG ZAPADA! ODABRANA ZA NAJBOLJU KNJIGU 2013. GODINE, PREMA IZBORU ECONOMISTA I FT-A! Nakon šest decenija ubrzano rastućeg životnog standarda, ekonomije Zapada su počele da stagniraju. Dok se političari i ekonomisti prepiru oko toga na koji način treba pokrenuti ekon..."
+    },
+    {
+        "name" : "NAUČITE REACT",
+        "price" : "1.400,00 RSD",
+        "img" : "react.jpg",
+        "categorie" : "computer",
+        "atribute" : "top",
+        "description" : "Što se tiče novih radnih okvira i biblioteka za veb, React je postigao trenutni uspeh. Ne samo da se bavi najuobičajenijim problemima s kojima se programeri susreću kada prave složene aplikacije, već nudi dodatne trikove koji daleko olakšavaju pravljenje ­vizuelnih elemenata z..."
+    },
+    {
+        "name" : "NAUČITE BOOTSTRAP 4 II izdanje",
+        "price" : "1.650,00 RSD",
+        "img" : "bootstrap.jpg",
+        "categorie" : "computer",
+        "atribute" : "sales",
+        "description" : "Gradite prilagodljive, dinamičke i mobile-first aplikacije na Vebu pomoću Bootstrapa 4 Šta ćete naučiti: da kreirate profesionalni veb sajt zasnovan na Bootstrapu, 'od nule', bez upotrebe nezavisnih šablona da iskoristite Bootstrapov moćan sistem rasporeda elemenata da sti..."
+    },
+    {
+        "name" : "PHP 7 MYSQL I JAVASCRIPT U JEDNOJ KNJIZI",
+        "price" : "2.750,00 RSD",
+        "img" : "php.jpg",
+        "categorie" : "computer",
+        "atribute" : "new",
+        "description" : "PHP, MYSQL I JAVASCRIPT U JEDNOJ KNJIZI - Najznačajnija nova verzija PHP-a u poslednjoj deceniji, ažurirana da bude potpuno usklađena sa PHP verzijom 7 - Novi i prošireni opisi upotrebe JavaScripta i jQueryja u čeonom interfejsu koje reflektuju aktuelnu praksu veb programira..."
+    },
+    {
+        "name" : "NODE.JS MONGODB i ANGULAR integrisane alatke za razvoj veb strana",
+        "price" : "2.640,00 RSD",
+        "img" : "node.jpg",
+        "categorie" : "computer",
+        "atribute" : "new",
+        "description" : "Definitivni vodič za upotrebu steka MEAN za izradu veb aplikacija Node.js je vodeće programsko okruženje, MongoDB je najpopularnija NoSQL baza podataka, a Angular je vodeći radni okvir za izloženi (front-end) razvoj koji je zasnovan na MVC-u. Zajedno čine potpuno integrisane ..."
+    },
+    {
+        "name" : "PYTHON RAZVOJ MIKROSERVISA",
+        "price" : "1.650,00 RSD",
+        "img" : "python.jpg",
+        "categorie" : "computer",
+        "atribute" : "top",
+        "description" : "Praktičan pristup savladavanja složenosti mikroservisa pomoću Python alata. Šta ćete naučiti - Istražićete šta su mikroservisi i kako da ih projektujete. - Upotrebićete Python 3, Flask, Tox i druge alatke za izgradnju servisa, koristeći najbolju praksu. - Naučićete kako da..."
+    },
+    {
+        "name" : "ANGULAR 6 OD OSNOVNIH DO POSLOVNIH VEB APLIKACIJA",
+        "price" : "2.200,00 RSD",
+        "img" : "angular6.jpg",
+        "categorie" : "computer",
+        "atribute" : "sales",
+        "description" : "Ova knjiga je za početnike i iskusne programere koji žele da uče o Angularu ili veb razvoju uopšte. Ako ste Angular programer, predstavićemo vam ceo proces od projektovanja i primene Angular aplikacije do izrade veb stranica. Učićete o Angular obrascima koje je lako razumeti i..."
+    },
+    {
+        "name" : "OBJEKTNO ORIJENTISAN JAVASCRIPT III izdanje",
+        "price" : "2.310,00 RSD",
+        "img" : "javaScript.jpg",
+        "categorie" : "computer",
+        "atribute" : "top",
+        "description" : "JavaScript je objektno-orijentisani programski jezik koji se koristi za razvoj veb sajtova. Veb stranice se danas prave po obrascu koji se sastoji od tri jasno prepoznatljiva dela: sadržaja (HTML), prezentacije (CSS) i ponašanja (JavaScript). JavaScript predstavlja važan „stub..."
+    },
+    {
+        "name" : "NAUČITE JQUERY 3 V izdanje",
+        "price" : "1.870,00 RSD",
+        "img" : "jQuery.jpg",
+        "categorie" : "computer",
+        "atribute" : "sales",
+        "description" : "Ako ste veb programer i želite da kreirate veb aplikacije koje dobro izgledaju, koje su efikasne, imaju bogat korisnički interfejs i integrišu se bez problema sa bilo kojim pozadinskim prikazom pomoću AJAX-a, onda je ova knjiga idealna za vas. Prikazaćemo vam kako možete da in..."
     }
 ]

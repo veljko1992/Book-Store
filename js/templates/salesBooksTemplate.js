@@ -6,7 +6,7 @@ $.getJSON("json/books.json", function (result) {
 
     for(i = 0; i < salesBook.length; i++){
         if(salesBook[i].atribute == 'sales'){
-            salesItems += `<div class="bookItem col-6 col-md 4 col-xl-3">
+            salesItems += `<div class="bookItem col-6 col-sm-4 col-lg-3">
                         <div class="imgWrapper"><img src="img/${salesBook[i].img}" alt="" class="img-fluid"></div>
                             <div class="textWrapper">
                               <ul>

@@ -31,8 +31,13 @@
                 width: 100%;
                 margin: 0 auto;
                 text-align: left;
+                tr:first-child{
+                    td{
+                        font-weight: bold;
+                    }
+                }
                 td{
-                    border: 1px solid black;
+                    // border: 1px solid black;
                     padding: 5px 5px;
                     font-size: 14px;
                 }
@@ -56,7 +61,7 @@
             #tbWrapper{
                 display: flex;
                 justify-content: flex-end;
-                margin-top: 20px;
+                margin-top: 50px;
                 #totalBill{
                     border: 1px dashed black;
                     padding: 15px;

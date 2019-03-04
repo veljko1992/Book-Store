@@ -126,6 +126,7 @@ $(document).ready(function() {
     countItem.id = numArticle;
     countItem.name = bookName;
     countItem.price = bookPrice;
+    
   
     addItem(countItem);
 
@@ -207,6 +208,7 @@ $(document).ready(function() {
   function createTable(item) {
     var table = `<h2>Vaši artikli</h2>`;
     table += `<table>`;
+    table += `<tr><td>Br.</td><td>Id.</td><td>Naziv</td><td>Cena</td>`;
     for (i = 0; i < item.length; i++) {
       table += `<tr>`;
       table += `<td>${i + 1}.</td>`;
@@ -232,35 +234,14 @@ $(document).ready(function() {
       .append(localStorage.getItem("totalBill"))
       .append(".00 RSD");
   }
-//Old code
-  // function createTable(item) {
-  //   //Cart_content
-  //   var table = `<h2>Vaši artikli</h2>`;
-  //   table += `<table>`;
-  //   for (i = 0; i < item.length; i++) {
-  //     table += `<tr>`;
-  //     for (prop in item[i]) {
-  //       console.log(item[i][prop]);
-  //       table += `<td>${item[i][prop]}</td>`;
-  //     }
-  //     table += `<td><button class="faild">Obriši</button></td>`;
-  //     table += `</tr>`;
-  //   }
-  //   table += `</table>`;
-  //   table += `<div id="tbWrapper"><span id="totalBill">Ukupan račun je: </span></div>`;
-  //   $shoppingListItems.html(table);
-
-  //   $("#totalBill")
-  //     .append(localStorage.getItem("totalBill"))
-  //     .append(".00 RSD");
-  // }
-
   //Push items to shoping card END
 
   //Delete items
   $shoppingListItems.on('click', function(e){
     var tar = e.target.parentElement.parentElement.children;
     var strId = tar[1].textContent;
+    var price = parseInt(tar[3].textContent);
+
     var id = '';
     for (i = 0; i < strId.length; i++) {
       if (strId.charAt(i) >= 0 || strId.charAt(i) <= 9) {
@@ -271,8 +252,11 @@ $(document).ready(function() {
     var item = fetch();
     
     item = item.filter(item => item.id != id);
-    localStorage.clear();
     
+    var tb = parseInt(localStorage.getItem('totalBill'));
+    var newTb = tb - price;
+    localStorage.clear();
+    localStorage.setItem("totalBill", newTb);
     to_push = JSON.stringify(item);
     localStorage.setItem("countItems", to_push);
     listItems();
