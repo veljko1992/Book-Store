@@ -4,7 +4,6 @@ $(document).ready(function() {
   var navLi = $("nav li");
   var menuBtn = $("#menu-btn");
   var winWidth = $(window).width();
-  var $booksLink = $("#booksLink");
   var $booksList = $("#booksList");
 
   //Checking the screen width if more than 992 navigation is visible, and if smaller it is hidden
@@ -23,11 +22,13 @@ $(document).ready(function() {
     if (winWidth >= 992) {
       nav.css("display", "block");
       menuBtn.css("display", "none");
+      $('.action-hide').removeClass("d_none");
     } else {
       nav.css("display", "none");
       menuBtn.css("display", "block");
       $("#menu-btn span").removeClass("bOpen");
       nav.removeClass("open");
+      $('.action-hide').addClass("d_none");
     }
   });
   //When we click on x, navigation appears and disappears
@@ -190,6 +191,12 @@ $(document).ready(function() {
       $shoppingList.css("display", "block");
       $shoppingList.addClass('action-open');
       listItems();
+      var winWidth = $(window).width();
+      if (winWidth >= 992) {
+        $('.action-hide').removeClass("d_none");
+      } else {
+        $('.action-hide').addClass("d_none");
+      }
     }
   });
 
@@ -212,13 +219,13 @@ $(document).ready(function() {
   function createTable(items) {
     var table = `<h2>Vaši artikli</h2>`;
     table += `<table>`;
-    table += `<tr><td>Br.</td><td>ID</td><td>Naziv</td><td>Cena</td><td>Količina</td>`;
+    table += `<tr><td class="action-hide">Br.</td><td class="action-hide">ID</td><td>Naziv</td><td>Cena</td><td>Količina</td>`;
     for (i = 0; i < items.length; i++) {
       table += `<tr>`;
-      table += `<td>${i + 1}.</td>`;
+      table += `<td class="action-hide">${i + 1}.</td>`;
       for (prop in items[i]) {
         if(prop == 'id'){
-          table += `<td class='action-id' data-id="${items[i][prop]}">${items[i][prop]}</td>`;
+          table += `<td class='action-id action-hide' data-id="${items[i][prop]}">${items[i][prop]}</td>`;
         }
         if(prop == 'name'){
           table += `<td class='action-name' data-name="${items[i][prop]}">${items[i][prop]}</td>`;
@@ -266,6 +273,12 @@ $(document).ready(function() {
     to_push = JSON.stringify(item);
     localStorage.setItem("countItems", to_push);
     listItems();
+    var winWidth = $(window).width();
+    if (winWidth >= 992) {
+      $('.action-hide').removeClass("d_none");
+    } else {
+      $('.action-hide').addClass("d_none");
+    }
     localStorage.setItem("numArticle", numArticle);
     checkNumArticle();
     if(item.length == 0){

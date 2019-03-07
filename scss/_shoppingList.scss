@@ -37,18 +37,18 @@
                     }
                 }
                 td{
-                    // border: 1px solid black;
                     padding: 5px 5px;
                     font-size: 14px;
                 }
-                td:nth-child(2){
-                    // display: none;
-                }
+
                 td:nth-child(3){
-                    width: 50%;
+                    width: 40%;
                 }
                 td:last-child{
                     border: none;
+                    .faild{
+                        padding: 5px 10px;
+                    }
                     button{
                         background-color: $red;
                         color: white;
@@ -125,7 +125,9 @@
         transform: rotate(-135deg);
       }
 }
-@media only screen and (min-width: 576px) { }
+@media only screen and (min-width: 576px) { 
+
+}
 
 @media only screen and (min-width: 768px) {}
 
