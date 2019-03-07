@@ -26,6 +26,10 @@ header {
             }
             a{
                 color: white;
+                font-size: 20px;
+                // &:hover{
+                //     color: $red;
+                // }
             }
         }
     }
@@ -204,6 +208,15 @@ header {
 
 @media only screen and (min-width: 992px) {
     header {
+        #headerTop{
+            ul{
+                li{
+                    a{
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
         #hederWrapper{
             justify-content: space-between;
             #logo {
