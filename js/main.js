@@ -80,36 +80,24 @@ $(document).ready(function() {
   //Navigation END
 
   //Prepare items for local storage
-  var $addItemButton = $(".addItem");
   var $numberArticle = $("#numberArticle");
+  var $bookSection = $('.bookSection');
 
   var countItem = {};
  
-  var fetched = false;
-
-  $addItemButton.on("click", function(e) {
   
-    var target = e.target;
-    var price =
-      target.previousSibling.previousSibling.textContent;
-    var bookName = target.parentElement.children[0].textContent;
-   
-    var bookPrice = "";
-    for (i = 0; i < price.length - 7; i++) {
-      if (price.charAt(i) >= 0 || price.charAt(i) <= 9) {
-        bookPrice += price.charAt(i);
-      }
-    }
-    bookPrice = parseInt(bookPrice);
-
+  $bookSection.on("click", ".addItem", function(e) {
+    e.preventDefault();
+    var bookPrice = parseInt($(this).closest(".bookItem").data('price'));
+    var bookName =  $(this).closest(".bookItem").data('name');
+    var bookId =  $(this).closest(".bookItem").data('id');
+    
     var numArticle = localStorage.getItem("numArticle");
 
     if (numArticle == null) {
       numArticle = parseInt(1);
     } else {
-      newNumb = parseInt(numArticle);
-      newNumb += 1;
-      numArticle = newNumb;
+      numArticle = parseInt(numArticle) + 1;
     }
 
     var totalBill = localStorage.getItem("totalBill");
@@ -123,7 +111,7 @@ $(document).ready(function() {
 
     totalBill += bookPrice;
 
-    countItem.id = numArticle;
+    countItem.id = bookId;
     countItem.name = bookName;
     countItem.price = bookPrice;
     countItem.quantity = 1;
@@ -154,29 +142,24 @@ $(document).ready(function() {
 
   // Add items to local sotorage
   function addItem(countItem) {
-    fetched = false;
     var countItems = [];
-    var item = fetch();
-    var ima = false;
-  console.log(countItem);
+    var items = fetch();
+    var has = false;
   
-    if (item != null) { 
-      item.forEach(el => {
+    if (items != null) { 
+      items.forEach(el => {
         if(el.name == countItem.name){
           el.quantity ++
-          ima = true;
+          has = true;
         }
       });
-      console.log(ima);
       
-      if(ima){
-        console.log('usao');
-        localStorage.clear();
-        to_push = JSON.stringify(item);
+      if(has){
+        to_push = JSON.stringify(items);
         localStorage.setItem("countItems", to_push);
       } else{
-        item.push(countItem);
-        to_push = JSON.stringify(item);
+        items.push(countItem);
+        to_push = JSON.stringify(items);
       }
     } else {
       countItems.push(countItem);
@@ -189,8 +172,8 @@ $(document).ready(function() {
 
   function fetch() {
     var to_fetch = localStorage.getItem("countItems");
-    var item = JSON.parse(to_fetch);
-    return item;
+    var items = JSON.parse(to_fetch);
+    return items;
   }
 
   // Add items to local sotorage END
@@ -203,48 +186,51 @@ $(document).ready(function() {
   var $shoppingListItems = $("#shoppingListItems");
 
   shoppingCart.on("click", function(e) {
-    $shoppingList.css("display", "block");
-    listItems();
+    if(!$shoppingList.hasClass('action-open')){
+      $shoppingList.css("display", "block");
+      $shoppingList.addClass('action-open');
+      listItems();
+    }
   });
 
   $exit.on("click", function(e) {
     $("#empty").remove();
     $shoppingList.css("display", "none");
+    $shoppingList.removeClass('action-open');
   });
 
   function listItems() {
-    var item = fetch();
-    if (item == null) {
+    var items = fetch();
+    if (items == null) {
       $shoppingListItems.append('<p id="empty">Shoping lista je prazna</p>');
     } else {
-      createTable(item);
+      createTable(items);
     }
-    fetched = true;
     return;
   }
 
-  function createTable(item) {
+  function createTable(items) {
     var table = `<h2>Vaši artikli</h2>`;
     table += `<table>`;
     table += `<tr><td>Br.</td><td>ID</td><td>Naziv</td><td>Cena</td><td>Količina</td>`;
-    for (i = 0; i < item.length; i++) {
+    for (i = 0; i < items.length; i++) {
       table += `<tr>`;
       table += `<td>${i + 1}.</td>`;
-      for (prop in item[i]) {
+      for (prop in items[i]) {
         if(prop == 'id'){
-          table += `<td>${item[i][prop]}</td>`;
+          table += `<td class='action-id' data-id="${items[i][prop]}">${items[i][prop]}</td>`;
         }
         if(prop == 'name'){
-          table += `<td>${item[i][prop]}</td>`;
+          table += `<td class='action-name' data-name="${items[i][prop]}">${items[i][prop]}</td>`;
         }
         if(prop == 'quantity'){
-          table += `<td>${item[i][prop]}</td>`;
+          table += `<td class='action-quantity' data-quantity="${items[i][prop]}">${items[i][prop]}</td>`;
         }
         if(prop == 'price'){
-          table += `<td>${item[i][prop]},00 RSD</td>`;
+          table += `<td class='action-price' data-price="${items[i][prop]}">${items[i][prop]},00 RSD</td>`;
         }
       }
-      table += `<td><button class="faild">Obriši</button></td>`;
+      table += `<td><button class="faild action-delete">Obriši</button></td>`;
       table += `</tr>`;
     }
     table += `</table>`;
@@ -253,36 +239,34 @@ $(document).ready(function() {
 
     $("#totalBill")
       .append(localStorage.getItem("totalBill"))
-      .append(".00 RSD");
+      .append(",00 RSD");
   }
   //Push items to shoping card END
+  function getSum(total, num) {
+    return total + num;
+  }
 
   //Delete items
-  $shoppingListItems.on('click', function(e){
-    var tar = e.target.parentElement.parentElement.children;
-    var strId = tar[1].textContent;
-    var name = tar[2].textContent;
-    var price = parseInt(tar[3].textContent);
+  $shoppingListItems.on('click', '.action-delete', function(e){
+    var id = $(this).closest('tr').children('.action-id').data('id');
+    var price = $(this).closest('tr').children('.action-price').data('price');
+    var quantity = $(this).closest('tr').children('.action-quantity').data('quantity');
 
-    var id = '';
-    for (i = 0; i < strId.length; i++) {
-      if (strId.charAt(i) >= 0 || strId.charAt(i) <= 9) {
-        id += strId.charAt(i);
-      }
-    }
-    id = parseInt(id);
     var item = fetch();
+    var numArticle = 0;
     
-    item = item.filter(item => item.name != name);
-    
-    var tb = parseInt(localStorage.getItem('totalBill'));
-    var newTb = tb - price;
-    localStorage.clear();
-    localStorage.setItem("totalBill", newTb);
+    item = item.filter(item => item.id != id);
+    item.forEach(el => {
+      return numArticle += el.quantity;
+    });
+
+    var totalBill = parseInt(localStorage.getItem('totalBill'));
+    totalBill = totalBill - (price * quantity);
+    localStorage.setItem("totalBill", totalBill);
     to_push = JSON.stringify(item);
     localStorage.setItem("countItems", to_push);
     listItems();
-    localStorage.setItem("numArticle", item.length);
+    localStorage.setItem("numArticle", numArticle);
     checkNumArticle();
     if(item.length == 0){
       localStorage.clear();

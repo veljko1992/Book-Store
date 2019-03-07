@@ -30,7 +30,7 @@ a:hover {
     li.itemPrice {
       margin-bottom: 20px;
     }
-    li:last-child {
+    li a {
       background-color: $red;
       border-radius: 3px;
       color: white;

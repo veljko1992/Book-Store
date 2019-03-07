@@ -1,218 +1,245 @@
 [
     {
         "name" : "Agape 2",
-        "price" : "484,00 RSD",
+        "price" : "484",
         "img" : "agape2.jpg",
         "atribute" : "new",
         "categorie" : "social",
-        "description" : "Knjiga Agape 2 je nastavak prvog dela ove knjige nastale na osnovu razgovora vođenih u serijalu Agape Studija B. TEME: Život i smrt – gosti: Vladeta Jerotić, Miloš Vesin Ljubav - gosti: Vladeta Jerotić, Vladika Porfirije, Zoran Jelisavčić Liturgija - gosti: Vladeta Jerotić, V..."
+        "description" : "Knjiga Agape 2 je nastavak prvog dela ove knjige nastale na osnovu razgovora vođenih u serijalu Agape Studija B. TEME: Život i smrt – gosti: Vladeta Jerotić, Miloš Vesin Ljubav - gosti: Vladeta Jerotić, Vladika Porfirije, Zoran Jelisavčić Liturgija - gosti: Vladeta Jerotić, V...",
+        "id" : "001"
     },
     {
         "name" : "Agape 1",
-        "price" : "484,00 RSD",
+        "price" : "484",
         "img" : "agape1.jpg",
         "atribute" : "top",
         "categorie" : "social",
-        "description" : "Na osnovu razgovora vođenih u serijalu Agape Studija B. TEME: Tesna su vrata koja vode u život – gost: Patrijarh Pavle Smisao - gosti: Vladeta Jerotić, Nenad Ilić, Milan Ćirković, Zagorka Golubović Vera - gosti: Vladeta Jerotić, Nikola Tucić Brak - gosti: Vladeta Jerotić, Ves.."
+        "description" : "Na osnovu razgovora vođenih u serijalu Agape Studija B. TEME: Tesna su vrata koja vode u život – gost: Patrijarh Pavle Smisao - gosti: Vladeta Jerotić, Nenad Ilić, Milan Ćirković, Zagorka Golubović Vera - gosti: Vladeta Jerotić, Nikola Tucić Brak - gosti: Vladeta Jerotić, Ves..",
+        "id" : "002"
     },
     {
         "name" : "ISTORIJA SREDNJOVEKOVNOG SVETA I",
-        "price" : "1.189,15 RSD",
+        "price" : "1189",
         "img" : "istorijass1.jpg",
         "atribute" : "sales",
         "categorie" : "socila",
-        "description" : "Od Konstantinove hristijanizacije do naslednika proroka Muhameda. Izuzetna istorija srednjeg veka u dva toma, doba u kojem je religija postala oružje kraljeva širom sveta. U Istoriji starog sveta Suzan Vajs Bauer je pisala o rađanju kraljevstava na osnovu moći. Ali u godinama... "
+        "description" : "Od Konstantinove hristijanizacije do naslednika proroka Muhameda. Izuzetna istorija srednjeg veka u dva toma, doba u kojem je religija postala oružje kraljeva širom sveta. U Istoriji starog sveta Suzan Vajs Bauer je pisala o rađanju kraljevstava na osnovu moći. Ali u godinama... ",
+        "id" : "003"
     },
     {
         "name" : "KRITIKA PRAKTIČKOG UMA",
-        "price" : "797,50 RSD",
+        "price" : "797",
         "img" : "kritikaUma.jpg",
         "categorie" : "social",
         "atribute" : "new",
-        "description" : "/"
+        "description" : "/",
+        "id" : "004"
     },
     {
         "name" : "JEZIK NOVIH MEDIJA",
-        "price" : "1.584,00 RSD",
+        "price" : "1584",
         "img" : "jezikNm.jpg",
         "categorie" : "social",
         "atribute" : "top",
-        "description" : "Kao prva detaljna i sveobuhvatna analiza vizuelne estetike novih medija, ova knjiga postavlja nove medije unutar istorije vizuelne kulture, ukazujući na veze i različitosti između novih i starih medija. Nalazeći poreklo estetike novih medija u slikarstvu, fotografiji, filmu i..."
+        "description" : "Kao prva detaljna i sveobuhvatna analiza vizuelne estetike novih medija, ova knjiga postavlja nove medije unutar istorije vizuelne kulture, ukazujući na veze i različitosti između novih i starih medija. Nalazeći poreklo estetike novih medija u slikarstvu, fotografiji, filmu i...",
+        "id" : "005"
     },
     {
         "name" : "SVETO I PROPADLJIVO",
-        "price" : "1.584,00 RSD",
+        "price" : "1584",
         "img" : "svetoIp.jpg",
         "categorie" : "social",
         "atribute" : "sales",
-        "description" : "Prоmеnа u оdnоsu prеmа tеlu kојu је dоnеlо sаvrеmеnо dоbа, u vеlikоm dеlu društаvа dаnаšnjеg svеtа izmеnilа је оptiku krоz kојu sе sаglеdаvа tеlеsnо, a оvа prоmеnа pаrаdigmе uticаlа је i nа istrаživаnjа kоја sе bаvе shvаtаnjеm mеstа i ulоgе tеlа unutаr hrišćаnskе istоriје. Upu..."
+        "description" : "Prоmеnа u оdnоsu prеmа tеlu kојu је dоnеlо sаvrеmеnо dоbа, u vеlikоm dеlu društаvа dаnаšnjеg svеtа izmеnilа је оptiku krоz kојu sе sаglеdаvа tеlеsnо, a оvа prоmеnа pаrаdigmе uticаlа је i nа istrаživаnjа kоја sе bаvе shvаtаnjеm mеstа i ulоgе tеlа unutаr hrišćаnskе istоriје. Upu...",
+        "id" : "006"
     },
     {
         "name" : "INTELEKTUALNI ŠARLATANI",
-        "price" : "712,80 RSD",
+        "price" : "712",
         "img" : "intelektualniS.jpg",
         "categorie" : "social",
         "atribute" : "new",
-        "description" : "Da li postmoderni intelektualci zloupotrebljavaju nauku? Godine 1996, u popularnom naučnom časopisu Soušel tekst, eminentni fizičar i univerzitetski profesor Alan Sokal objavio je pompezan i poprilično besmislen tekst pod nazivom „Prevazilaženje granica: ka transformativno...."
+        "description" : "Da li postmoderni intelektualci zloupotrebljavaju nauku? Godine 1996, u popularnom naučnom časopisu Soušel tekst, eminentni fizičar i univerzitetski profesor Alan Sokal objavio je pompezan i poprilično besmislen tekst pod nazivom „Prevazilaženje granica: ka transformativno....",
+        "id" : "007"
     },
     {
         "name" : "LIMFEDEM Savremena terapija",
-        "price" : "1.320,00 RSD",
+        "price" : "1320",
         "img" : "limfedem.jpg",
         "categorie" : "medicine",
         "atribute" : "top",
-        "description" : "Limfedem : savremena terapija limfedema i komplikacija"
+        "description" : "Limfedem : savremena terapija limfedema i komplikacija",
+        "id" : "008"
     },
     {
         "name" : "PSIHOTERAPIJA",
-        "price" : "1.584,00 RSD",
+        "price" : "1584",
         "img" : "psihoterapija.jpg",
         "categorie" : "medicine",
         "atribute" : "sales",
-        "description" : "Najistaknutiji domaći stručnjaci i nekadašnji beogradski studenti koji sada predaju u Londonu, Sent Luisu ili Sidneju, okupili su se da bi prikazali najvažnije trendove u psihoanalitičkim, kognitivno-bihevioralnim, odnosno grupnim i porodičnim pristupima psihoterapiji. Preth..."
+        "description" : "Najistaknutiji domaći stručnjaci i nekadašnji beogradski studenti koji sada predaju u Londonu, Sent Luisu ili Sidneju, okupili su se da bi prikazali najvažnije trendove u psihoanalitičkim, kognitivno-bihevioralnim, odnosno grupnim i porodičnim pristupima psihoterapiji. Preth...",
+        "id" : "009"
     },
     {
         "name" : "PRAKTIKUM I ATLAS IZ HISTOLOGIJE I EMBRIOLOGIJE",
-        "price" : "1.919,20 RSD",
+        "price" : "1919",
         "img" : "praktikumAtlas.jpg",
         "categorie" : "medicine",
         "atribute" : "new",
-        "description" : "/"
+        "description" : "/",
+        "id" : "010"
     },
     {
         "name" : "ATLAS ANATOMIJE ČOVEKA VII izdanje",
-        "price" : "8.599,00 RSD",
+        "price" : "8599",
         "img" : "atlasCoveka.jpg",
         "categorie" : "medicine",
         "atribute" : "top",
-        "description" : "Neprevaziđen prikaz anatomije ljudskog tela u medicini i zdravstvu! Kao jedini atlas anatomije čoveka koji su ilustrovali lekari, 7. izdanje svetski poznate knjige Alas anatomije čoveka čitaocima donosi izuzetno precizne i jasne prikaze ljudskog tela iz kliničke perspektive. ..."
+        "description" : "Neprevaziđen prikaz anatomije ljudskog tela u medicini i zdravstvu! Kao jedini atlas anatomije čoveka koji su ilustrovali lekari, 7. izdanje svetski poznate knjige Alas anatomije čoveka čitaocima donosi izuzetno precizne i jasne prikaze ljudskog tela iz kliničke perspektive. ...",
+        "id" : "011"
     },
     {
         "name" : "PRAKTIKUM KLINIČKE RADIOLOGIJE",
-        "price" : "1.039,20 RSD",
+        "price" : "1039",
         "img" : "praktikumKlinicke.jpg",
         "categorie" : "medicine",
         "atribute" : "sales",
-        "description" : "3. izmenjeno i dopunjeno izdanje. Radiologija je poslednjih decenija doživela napredak kakav je doskora bilo nemoguće i naslutiti. Razvijene su klasične slikovne metode pregleda i uvedene nove (ehotomografija, kompjuterizovana tomografija, magnetna rezonanca), a već danas je ..."
+        "description" : "3. izmenjeno i dopunjeno izdanje. Radiologija je poslednjih decenija doživela napredak kakav je doskora bilo nemoguće i naslutiti. Razvijene su klasične slikovne metode pregleda i uvedene nove (ehotomografija, kompjuterizovana tomografija, magnetna rezonanca), a već danas je ...",
+        "id" : "012"
     },
     {
         "name" : "MOŽDANI UDAR Vodič za prevenciju lečenje i rehabilitaciju",
-        "price" : "339,15 RSD",
+        "price" : "339",
         "img" : "mozdaniUdar.jpg",
         "categorie" : "medicine",
         "atribute" : "new",
-        "description" : "Moždani udar je treći uzrok smrtnosti u razvijenim zemljama sveta, posle kardiovaskularnih i malignih bolesti, a drugi uzrok smrtnosti u celom svetu i, istovremeno, drugi najčešći uzrok demencije, najčešći uzrok epilepsije u starijih i čest uzrok depresije. Srbija se ubraja me... "
+        "description" : "Moždani udar je treći uzrok smrtnosti u razvijenim zemljama sveta, posle kardiovaskularnih i malignih bolesti, a drugi uzrok smrtnosti u celom svetu i, istovremeno, drugi najčešći uzrok demencije, najčešći uzrok epilepsije u starijih i čest uzrok depresije. Srbija se ubraja me... ",
+        "id" : "013"
     },
     {
         "name" : "KORPORATIVNO LOBIRANJE U EVROPSKOJ UNIJI",
-        "price" : "1.280,00 RSD",
+        "price" : "1280",
         "img" : "korporativnoBankarstvo.jpg",
         "categorie" : "economy",
         "atribute" : "sales",
-        "description" : "Knjiga će biti korisna kako privrednicima, konsultantima i lobistima tako i političarima te studentima – pogotovo poslovnih škola, ekonomskih i fakulteta sociologije i političkih nauka. Ona će biti korisna i novinarima, koji često u lobiranju vide samo negativno i često ga izj..."
+        "description" : "Knjiga će biti korisna kako privrednicima, konsultantima i lobistima tako i političarima te studentima – pogotovo poslovnih škola, ekonomskih i fakulteta sociologije i političkih nauka. Ona će biti korisna i novinarima, koji često u lobiranju vide samo negativno i često ga izj...",
+        "id" : "014"
     },
     {
         "name" : "ISLAMSKO BANKARSTVO Teorija i praksa",
-        "price" : "528,00 RSD",
+        "price" : "528",
         "img" : "islamskoBankarstvo.jpg",
         "categorie" : "economy",
         "atribute" : "top",
-        "description" : "Tematski raspon sistemski široko postavljenog i čvrsto strukturisanog prikaza islamskog bankarstva u ovoj promišljeno komponovanoj, sveobuhvatnoj monografiji polazi od temeljnog pojmovno-terminološkog definisanja osnovnih koncepata šerijatskog prava u ovoj oblasti, da bi potom..."
+        "description" : "Tematski raspon sistemski široko postavljenog i čvrsto strukturisanog prikaza islamskog bankarstva u ovoj promišljeno komponovanoj, sveobuhvatnoj monografiji polazi od temeljnog pojmovno-terminološkog definisanja osnovnih koncepata šerijatskog prava u ovoj oblasti, da bi potom...",
+        "id" : "015"
     },
     {
         "name" : "GLOBALIZACIJA I NJENE PROTIVREČNOSTI",
-        "price" : "1.742,40 RSD",
+        "price" : "1742",
         "img" : "globaizacijaProtivrecnosti.jpg",
         "categorie" : "economy",
         "atribute" : "new",
-        "description" : "U ovom novom proširenom i ključnom izdanju svog bestselera, čuveni ekonomista i dobitnik Nobelove nagrade Džozef J. Stiglic bavi se novim protivrečnostima globalizacije u Sjedinjenim Državama i Evropi. Odmah po objavljivanju, delo Globalizacija i njene protivrečnosti postalo..."
+        "description" : "U ovom novom proširenom i ključnom izdanju svog bestselera, čuveni ekonomista i dobitnik Nobelove nagrade Džozef J. Stiglic bavi se novim protivrečnostima globalizacije u Sjedinjenim Državama i Evropi. Odmah po objavljivanju, delo Globalizacija i njene protivrečnosti postalo...",
+        "id" : "016"
     },
     {
         "name" : "NOVI EKONOMSKI MANIFEST",
-        "price" : "880,00 RSD",
+        "price" : "880",
         "img" : "noviEkonoskiManifest.jpg",
         "categorie" : "economy",
         "atribute" : "top",
-        "description" : "Novi ekonomski manifest ~ put ka optimalnom razvoju Srbije: Ovaj program ili projekat, ili kako ga je autor nazvao „Novi ekonomski manifest“ je vrlo ozbiljna analiza, dubok i suštinski prodor u ogromne probleme privrede, društva i države, sa očitim naporom i željom autora da p..."
+        "description" : "Novi ekonomski manifest ~ put ka optimalnom razvoju Srbije: Ovaj program ili projekat, ili kako ga je autor nazvao „Novi ekonomski manifest“ je vrlo ozbiljna analiza, dubok i suštinski prodor u ogromne probleme privrede, društva i države, sa očitim naporom i željom autora da p...",
+        "id" : "017"
     },
     {
         "name" : "HRONIKA TRANZICIONOG GROBLJA",
-        "price" : "1.584,00 RSD",
+        "price" : "1584",
         "img" : "hronikaTranz.jpg",
         "categorie" : "economy",
         "atribute" : "sales",
-        "description" : "Ova knjiga namenjena je svim budućim istraživačima srpske tranzicije i ekonomske degradacije društva krajem XX i početkom XXI veka. Njena knjiga namenjena je čitaocima kojima je stalo da dođu do prave istine i do traganja za njom."
+        "description" : "Ova knjiga namenjena je svim budućim istraživačima srpske tranzicije i ekonomske degradacije društva krajem XX i početkom XXI veka. Njena knjiga namenjena je čitaocima kojima je stalo da dođu do prave istine i do traganja za njom.",
+        "id" : "018"
     },
     {
         "name" : "KADA NOVCA PONESTANE",
-        "price" : "1.759,20 RSD",
+        "price" : "1759",
         "img" : "kadaNovca.jpg",
         "categorie" : "economy",
         "atribute" : "new",
-        "description" : "KRAJ IMUĆNOG ZAPADA! ODABRANA ZA NAJBOLJU KNJIGU 2013. GODINE, PREMA IZBORU ECONOMISTA I FT-A! Nakon šest decenija ubrzano rastućeg životnog standarda, ekonomije Zapada su počele da stagniraju. Dok se političari i ekonomisti prepiru oko toga na koji način treba pokrenuti ekon..."
+        "description" : "KRAJ IMUĆNOG ZAPADA! ODABRANA ZA NAJBOLJU KNJIGU 2013. GODINE, PREMA IZBORU ECONOMISTA I FT-A! Nakon šest decenija ubrzano rastućeg životnog standarda, ekonomije Zapada su počele da stagniraju. Dok se političari i ekonomisti prepiru oko toga na koji način treba pokrenuti ekon...",
+        "id" : "019"
     },
     {
         "name" : "NAUČITE REACT",
-        "price" : "1.400,00 RSD",
+        "price" : "1400",
         "img" : "react.jpg",
         "categorie" : "computer",
         "atribute" : "top",
-        "description" : "Što se tiče novih radnih okvira i biblioteka za veb, React je postigao trenutni uspeh. Ne samo da se bavi najuobičajenijim problemima s kojima se programeri susreću kada prave složene aplikacije, već nudi dodatne trikove koji daleko olakšavaju pravljenje ­vizuelnih elemenata z..."
+        "description" : "Što se tiče novih radnih okvira i biblioteka za veb, React je postigao trenutni uspeh. Ne samo da se bavi najuobičajenijim problemima s kojima se programeri susreću kada prave složene aplikacije, već nudi dodatne trikove koji daleko olakšavaju pravljenje ­vizuelnih elemenata z...",
+        "id" : "020"
     },
     {
         "name" : "NAUČITE BOOTSTRAP 4 II izdanje",
-        "price" : "1.650,00 RSD",
+        "price" : "1650",
         "img" : "bootstrap.jpg",
         "categorie" : "computer",
         "atribute" : "sales",
-        "description" : "Gradite prilagodljive, dinamičke i mobile-first aplikacije na Vebu pomoću Bootstrapa 4 Šta ćete naučiti: da kreirate profesionalni veb sajt zasnovan na Bootstrapu, 'od nule', bez upotrebe nezavisnih šablona da iskoristite Bootstrapov moćan sistem rasporeda elemenata da sti..."
+        "description" : "Gradite prilagodljive, dinamičke i mobile-first aplikacije na Vebu pomoću Bootstrapa 4 Šta ćete naučiti: da kreirate profesionalni veb sajt zasnovan na Bootstrapu, 'od nule', bez upotrebe nezavisnih šablona da iskoristite Bootstrapov moćan sistem rasporeda elemenata da sti...",
+        "id" : "021"
     },
     {
         "name" : "PHP 7 MYSQL I JAVASCRIPT U JEDNOJ KNJIZI",
-        "price" : "2.750,00 RSD",
+        "price" : "2750",
         "img" : "php.jpg",
         "categorie" : "computer",
         "atribute" : "new",
-        "description" : "PHP, MYSQL I JAVASCRIPT U JEDNOJ KNJIZI - Najznačajnija nova verzija PHP-a u poslednjoj deceniji, ažurirana da bude potpuno usklađena sa PHP verzijom 7 - Novi i prošireni opisi upotrebe JavaScripta i jQueryja u čeonom interfejsu koje reflektuju aktuelnu praksu veb programira..."
+        "description" : "PHP, MYSQL I JAVASCRIPT U JEDNOJ KNJIZI - Najznačajnija nova verzija PHP-a u poslednjoj deceniji, ažurirana da bude potpuno usklađena sa PHP verzijom 7 - Novi i prošireni opisi upotrebe JavaScripta i jQueryja u čeonom interfejsu koje reflektuju aktuelnu praksu veb programira...",
+        "id" : "022"
     },
     {
         "name" : "NODE.JS MONGODB i ANGULAR integrisane alatke za razvoj veb strana",
-        "price" : "2.640,00 RSD",
+        "price" : "2640",
         "img" : "node.jpg",
         "categorie" : "computer",
         "atribute" : "new",
-        "description" : "Definitivni vodič za upotrebu steka MEAN za izradu veb aplikacija Node.js je vodeće programsko okruženje, MongoDB je najpopularnija NoSQL baza podataka, a Angular je vodeći radni okvir za izloženi (front-end) razvoj koji je zasnovan na MVC-u. Zajedno čine potpuno integrisane ..."
+        "description" : "Definitivni vodič za upotrebu steka MEAN za izradu veb aplikacija Node.js je vodeće programsko okruženje, MongoDB je najpopularnija NoSQL baza podataka, a Angular je vodeći radni okvir za izloženi (front-end) razvoj koji je zasnovan na MVC-u. Zajedno čine potpuno integrisane ...",
+        "id" : "023"
     },
     {
         "name" : "PYTHON RAZVOJ MIKROSERVISA",
-        "price" : "1.650,00 RSD",
+        "price" : "1650",
         "img" : "python.jpg",
         "categorie" : "computer",
         "atribute" : "top",
-        "description" : "Praktičan pristup savladavanja složenosti mikroservisa pomoću Python alata. Šta ćete naučiti - Istražićete šta su mikroservisi i kako da ih projektujete. - Upotrebićete Python 3, Flask, Tox i druge alatke za izgradnju servisa, koristeći najbolju praksu. - Naučićete kako da..."
+        "description" : "Praktičan pristup savladavanja složenosti mikroservisa pomoću Python alata. Šta ćete naučiti - Istražićete šta su mikroservisi i kako da ih projektujete. - Upotrebićete Python 3, Flask, Tox i druge alatke za izgradnju servisa, koristeći najbolju praksu. - Naučićete kako da...",
+        "id" : "024"
     },
     {
         "name" : "ANGULAR 6 OD OSNOVNIH DO POSLOVNIH VEB APLIKACIJA",
-        "price" : "2.200,00 RSD",
+        "price" : "2200",
         "img" : "angular6.jpg",
         "categorie" : "computer",
         "atribute" : "sales",
-        "description" : "Ova knjiga je za početnike i iskusne programere koji žele da uče o Angularu ili veb razvoju uopšte. Ako ste Angular programer, predstavićemo vam ceo proces od projektovanja i primene Angular aplikacije do izrade veb stranica. Učićete o Angular obrascima koje je lako razumeti i..."
+        "description" : "Ova knjiga je za početnike i iskusne programere koji žele da uče o Angularu ili veb razvoju uopšte. Ako ste Angular programer, predstavićemo vam ceo proces od projektovanja i primene Angular aplikacije do izrade veb stranica. Učićete o Angular obrascima koje je lako razumeti i...",
+        "id" : "025"
     },
     {
         "name" : "OBJEKTNO ORIJENTISAN JAVASCRIPT III izdanje",
-        "price" : "2.310,00 RSD",
+        "price" : "2310",
         "img" : "javaScript.jpg",
         "categorie" : "computer",
         "atribute" : "top",
-        "description" : "JavaScript je objektno-orijentisani programski jezik koji se koristi za razvoj veb sajtova. Veb stranice se danas prave po obrascu koji se sastoji od tri jasno prepoznatljiva dela: sadržaja (HTML), prezentacije (CSS) i ponašanja (JavaScript). JavaScript predstavlja važan „stub..."
+        "description" : "JavaScript je objektno-orijentisani programski jezik koji se koristi za razvoj veb sajtova. Veb stranice se danas prave po obrascu koji se sastoji od tri jasno prepoznatljiva dela: sadržaja (HTML), prezentacije (CSS) i ponašanja (JavaScript). JavaScript predstavlja važan „stub...",
+        "id" : "026"
     },
     {
         "name" : "NAUČITE JQUERY 3 V izdanje",
-        "price" : "1.870,00 RSD",
+        "price" : "1870",
         "img" : "jQuery.jpg",
         "categorie" : "computer",
         "atribute" : "sales",
-        "description" : "Ako ste veb programer i želite da kreirate veb aplikacije koje dobro izgledaju, koje su efikasne, imaju bogat korisnički interfejs i integrišu se bez problema sa bilo kojim pozadinskim prikazom pomoću AJAX-a, onda je ova knjiga idealna za vas. Prikazaćemo vam kako možete da in..."
+        "description" : "Ako ste veb programer i želite da kreirate veb aplikacije koje dobro izgledaju, koje su efikasne, imaju bogat korisnički interfejs i integrišu se bez problema sa bilo kojim pozadinskim prikazom pomoću AJAX-a, onda je ova knjiga idealna za vas. Prikazaćemo vam kako možete da in...",
+        "id" : "027"
     }
 ]
