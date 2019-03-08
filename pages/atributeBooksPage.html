@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>bookStore</title>
+    <!-- Reboot and grid -->
+    <link rel="stylesheet" href="../css/reboot.css" />
+    <link rel="stylesheet" href="../css/grid.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div id="headerTop">
+        <p>Dostava je besplatna za sve porudžine preko 2500,00 RSD.</p>
+        <ul>
+          <li>
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href=""><i class="fab fa-facebook"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div id="hederWrapper">
+        <div id="logo"><a href="../index.html"><img src="../img/logo.png" alt="" class="img-fluid"></a></div>
+        <nav>
+          <ul>
+            <li><a href="atributeBooksPage.html" data-atribute="new" class="action-page">NOVE KNJIGE</a></li>
+            <li><a href="atributeBooksPage.html" data-atribute="top" class="action-page">TOP KNJIGE</a></li>
+            <li><a href="atributeBooksPage.html" data-atribute="sales" class="action-page">RASPRODAJA KNJIGA</a></li>
+          </ul>
+        </nav>
+        <!-- Shopingcart -->
+        <div id="shoppingCart">
+          <i class="fas fa-shopping-cart"></i>
+          <div id="numberArticleWrapper">
+            <span id="numberArticle"></span>
+          </div>
+        </div>
+        <div id="menu-btn"><span></span> <span></span> <span></span></div>
+      </div>
+    </header>
+
+    <!-- Shopingcart List -->
+    <div id="shoppingList">
+      <div id="shoppingListWrapper">
+        <div class="exitWrapper">
+          <div id="exit" class="exit"><span></span> <span></span></div>
+        </div>
+        <div id="shoppingListItems"></div>
+      </div>
+    </div>
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <h1 id="atributeBooksHeading"></h1>
+            <div id="atributeBookItems" class="row bookSection"></div>
+        </div>
+    </main>
+      <!-- Write to us -->
+      <button id="activeForm">Pišite nam</button>
+
+      <div id="writeToUs">
+        <div id="formWrapper">
+            <div class="exitWrapper">
+                <div id="exit2" class="exit"><span></span> <span></span></div>
+              </div>
+          <form id="form" action="">
+            <h2>Pišite nam</h2>
+            <p id="mistakes"></p>
+            <label for="name" class="d_none">Ime:</label><br>
+            <input type="text" id="name" name="name" placeholder="Petar Petrovic"><br>
+            <label for="email" class="d_none">Imejl:</label><br>
+            <input type="email" id="email" name="email" placeholder="primer@primer.com"><br>
+            <label for="msg" class="d_none">Poruka:</label><br>
+            <textarea name="msg" id="msg" name="msg" rows="1" placeholder="Poruka..."></textarea><br>
+            <input id="btn" type="submit" value="Pošalji">
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <ul class="col-12 col-md-6">
+            <li><a href="#">Book Store</a></li>
+            <li>
+              <p>
+                U želji da ponudimo alternativu postojećim standardima u domaćem knjižarstvu kao i da ljubiteljima knjige omogućimo da u što kraćem roku i po najpovoljnijim uslovima dođu do najnovijih naslova, svetskih hitova kao i primeraka koji se trenutno nalaze samo u knjižarskom lancu Book Store, u ponudu smo uvrstili više od 50.000 naslova domaćih i stranih izdavača, gift program, multimediju i igrice.
+              </p>
+            </li>
+          </ul>
+          <ul class="col-12 col-md-6">
+            <li>Contact Us</li>
+            <li><i class="fas fa-map-marker-alt"></i> 7061 Orn Summit</li>
+            <li><i class="fas fa-clock"></i> 09:00 - 20:00</li>
+            <li><i class="fas fa-envelope"></i> Gilda_Powlowski@hotmail.com</li>
+            <li><i class="fas fa-phone"></i> 474-902-0975</li>
+          </ul>
+        </div>
+        <small>&copy;Veljko Ivanovic</small>
+      </div>
+    </footer>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery END -->
+    <!-- Atribute books template -->
+    <script src="../js/templates/atributeBooksTemplate.js"></script>
+    <!-- Main JS -->
+    <script src="../js/main.js"></script>
+  </body>
+</html>

@@ -79,3 +79,14 @@ main .imgWrapper{
     color: white;
   }
 }
+.btnWrapper{
+  display: flex;
+  justify-content: center;
+  .showBtn{
+    background-color: black;
+    margin-bottom: 30px;
+    &:hover{
+      background-color: lighten(black, 5);
+    }
+  }
+}
