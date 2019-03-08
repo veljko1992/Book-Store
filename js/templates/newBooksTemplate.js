@@ -7,7 +7,7 @@ $.getJSON("json/books.json", function (result) {
     for(i = 0; i < newBook.length; i++){
         if(newBook[i].atribute == 'new'){
             newItems += `<div class="bookItem col-6 col-sm-4 col-lg-3" data-name="${newBook[i].name}" data-price="${newBook[i].price}" data-id="${newBook[i].id}">
-                        <div class="imgWrapper"><img src="img/${newBook[i].img}" alt="" class="img-fluid"></div>
+                        <div class="imgWrapper"><a href="pages/showBookPage.html" class="showItem"><img src="img/${newBook[i].img}" alt="" class="img-fluid"></a></div>
                             <div class="textWrapper">
                               <ul>
                                 <li class="itemName">${newBook[i].name}</li>

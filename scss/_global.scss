@@ -7,8 +7,6 @@ h1,
 h2 {
   margin-bottom: 30px;
   text-align: center;
-}
-.bookSection {
   padding-top: 20px;
 }
 a {
@@ -17,6 +15,21 @@ a {
 a:hover {
   text-decoration: none;
 }
+.bookSection {
+  padding-top: 20px;
+}
+.bookItem{
+  margin-bottom: 30px;
+}
+main .imgWrapper{
+  img{
+    transition: all 0.3s;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+}
+
 .textWrapper {
   margin-top: 20px;
   ul {
@@ -54,7 +67,15 @@ a:hover {
   color: green;
   border: 1px solid green;
 }
-.faild, .success{
+.faild, .success, .showBtn{
   padding: 5px 15px;
   border-radius: 3px;
+}
+.showBtn{
+  background-color: $red;
+  color: white;
+  &:hover{
+    background-color: lighten($red, 5);
+    color: white;
+  }
 }

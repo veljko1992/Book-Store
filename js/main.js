@@ -400,4 +400,11 @@ $(document).ready(function() {
 
     return true;
   }
+//Show book item
+$bookSection.on("click", ".showItem", function(e) {
+  var bookId =  $(this).closest(".bookItem").data('id');
+  localStorage.setItem('showBookId', bookId);
+  
+});
+
 });
