@@ -304,19 +304,20 @@ $(document).ready(function() {
     <label for="buyNumber" class="d_none">Broj:</label><br>
     <input type="text" id="buyNumber" name="number" placeholder="069/xxxxxxx"><br>
     <label for="buyAdress" class="d_none">Adresa:</label><br>
-    <input type="text" id="buyAdress" name="adress" placeholder="Kralja Petra 1121/b"><br>
+    <input type="text" id="buyAdress" name="adress" placeholder="Kralja Petra 1121/b, Kaluđerica"><br>
     <input id="buyBtn" type="submit" value="Poruči">
   </form>`;
   $shoppingListItems.html(buyForm);
 
   var $buyInputs = $("#buyForm input");
-  var $buyLabels = $("#buyForm labuyIel");
+  var $buyLabels = $("#buyForm label");
 
   $buyInputs.on("click", function(e) {
     var tar = e.target;
     var label = tar.previousSibling.previousSibling.previousSibling;
     label.classList.remove("d_none");
   });
+
   $buyInputs.on("blur", function() {
     $buyLabels.addClass("d_none");
   });
