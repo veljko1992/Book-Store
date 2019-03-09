@@ -218,7 +218,7 @@ $(document).ready(function() {
   }
 
   function createTable(items) {
-    var table = `<h2>Vaši artikli</h2>`;
+    var table = `<h2>VAŠI ARTIKLI</h2>`;
     table += `<table>`;
     table += `<tr><td class="action-hide">Br.</td><td class="action-hide">ID</td><td>Naziv</td><td>Cena</td><td>Količina</td>`;
     for (i = 0; i < items.length; i++) {
@@ -294,7 +294,7 @@ $(document).ready(function() {
 //Continue shopping
   $shoppingListItems.on('click', '.action-continue', function(e){
     $shoppingListItems.empty();
-    var buyForm = `<h2>Informacije o korisniku</h2>
+    var buyForm = `<h2>ADRESA I PODATCI ISPORUKE</h2>
     <p id="buyMistakes"></p>
     <form id="buyForm" action="">
     <label for="buyName" class="d_none">Ime:</label><br>
