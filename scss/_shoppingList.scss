@@ -63,11 +63,10 @@
             }
             #buyForm{
                 text-align: left;
-                label{
-
-                }
                 input{
+                    border: none;
                     width: 80%;
+                    border-bottom: 1px solid black;
                 }
                 #buyBtn{
                     padding: 5px 10px;
