@@ -180,7 +180,6 @@ $(document).ready(function() {
   // Add items to local sotorage END
 
   //Push items to shoping card
-
   var shoppingCart = $("#shoppingCart");
   var $shoppingList = $("#shoppingList");
   var $exit = $("#exit");
@@ -202,6 +201,8 @@ $(document).ready(function() {
 
   $exit.on("click", function(e) {
     $("#empty").remove();
+    $("#shoppingListItems h2").remove();
+    $("#buyMistakes").remove();
     $shoppingList.css("display", "none");
     $shoppingList.removeClass('action-open');
   });
@@ -209,7 +210,7 @@ $(document).ready(function() {
   function listItems() {
     var items = fetch();
     if (items == null) {
-      $shoppingListItems.append('<p id="empty">Shoping lista je prazna</p>');
+      $shoppingListItems.append('<p id="empty">Korpa lista je prazna</p>');
     } else {
       createTable(items);
     }
@@ -241,6 +242,7 @@ $(document).ready(function() {
       table += `</tr>`;
     }
     table += `</table>`;
+    table += `<div id="tbWrapper"><button class="success action-continue">Nastavi kupovinu</button></div>`;
     table += `<div id="tbWrapper"><span id="totalBill">Ukupan račun je: </span></div>`;
     $shoppingListItems.html(table);
 
@@ -282,10 +284,127 @@ $(document).ready(function() {
     localStorage.setItem("numArticle", numArticle);
     checkNumArticle();
     if(item.length == 0){
-      localStorage.clear();
+      localStorage.removeItem('countItems');
+      localStorage.removeItem('numArticle');
+      localStorage.removeItem('totalBill');
       $shoppingListItems.empty();
       listItems();
     }
+  });
+//Continue shopping
+  $shoppingListItems.on('click', '.action-continue', function(e){
+    $shoppingListItems.empty();
+    var buyForm = `<h2>Informacije o korisniku</h2>
+    <p id="buyMistakes"></p>
+    <form id="buyForm" action="">
+    <label for="buyName" class="d_none">Ime:</label><br>
+    <input type="text" id="buyName" name="name" placeholder="Petar Petrovic"><br>
+    <label for="buyEmail" class="d_none">Imejl:</label><br>
+    <input type="email" id="buyEmail" name="email" placeholder="primer@primer.com"><br>
+    <label for="buyNumber" class="d_none">Broj:</label><br>
+    <input type="text" id="buyNumber" name="number" placeholder="069/xxxxxxx"><br>
+    <label for="buyAdress" class="d_none">Adresa:</label><br>
+    <input type="text" id="buyAdress" name="adress" placeholder="Kralja Petra 1121/b"><br>
+    <input id="buyBtn" type="submit" value="Poruči">
+  </form>`;
+  $shoppingListItems.html(buyForm);
+
+  var $buyInputs = $("#buyForm input");
+  var $buyLabels = $("#buyForm labuyIel");
+
+  $buyInputs.on("click", function(e) {
+    var tar = e.target;
+    var label = tar.previousSibling.previousSibling.previousSibling;
+    label.classList.remove("d_none");
+  });
+  $buyInputs.on("blur", function() {
+    $buyLabels.addClass("d_none");
+  });
+
+    //Validation buy form
+    var $buyForm = $("#buyForm");
+    var $buyMistakes = $("#buyMistakes");
+  
+    $buyForm.on("submit", e => {
+      e.preventDefault();
+      $buyMistakes.empty();
+      checkForm();
+    });
+  
+    function checkForm() {
+      if (filledName() && filledEmail() && filledNumber() && filledAdress()) {
+        $("#shoppingListItems h2").html('Hvala na poverenju');
+        $('#buyForm').remove();
+        $buyMistakes.addClass("success");
+        $buyMistakes.html("Uspesno ste poručili.");
+        $("#buyName, #buyEmail").val("");
+        localStorage.removeItem('countItems');
+        localStorage.removeItem('numArticle');
+        localStorage.removeItem('totalBill');
+        checkNumArticle();
+        return true;
+      } else {
+        return false;
+      }
+    }
+  
+    function filledName() {
+      var name = $("#buyName").val();
+  
+      if (name.trim().length == 0) {
+        $buyMistakes.removeClass("success");
+        $buyMistakes.addClass("faild");
+        $buyMistakes.html("Nije uneto ime.");
+        return false;
+      }
+  
+      return true;
+    }
+  
+    function filledEmail() {
+      var email = $("#buyEmail")
+        .val()
+        .trim();
+  
+      var r = new RegExp("[a-z0-9]+@([a-z0-9]+\\.)+[a-z]+");
+      if (r.test(email) == false) {
+        $buyMistakes.removeClass("success");
+        $buyMistakes.addClass("faild");
+        $buyMistakes.html("Neispravna imejl adresa.");
+        return false;
+      }
+      return true;
+    }
+
+    
+    function filledNumber() {
+      var number = $("#buyNumber")
+        .val()
+        .trim();
+  
+        var r = new RegExp("06[0-9]/[0-9]+");
+      if (r.test(number) == false) {
+        $buyMistakes.removeClass("success");
+        $buyMistakes.addClass("faild");
+        $buyMistakes.html("Neispravan broj.");
+        return false;
+      }
+      return true;
+    }
+
+    function filledAdress() {
+      var name = $("#buyAdress").val();
+  
+      if (name.trim().length == 0) {
+        $buyMistakes.removeClass("success");
+        $buyMistakes.addClass("faild");
+        $buyMistakes.html("Nije uneta adresa.");
+        return false;
+      }
+  
+      return true;
+    }
+
   });
 
 
@@ -316,8 +435,8 @@ $(document).ready(function() {
     }, 0);
   }
 
-  var $inputs = $("input");
-  var $labels = $("label");
+  var $inputs = $("#form input");
+  var $labels = $("#form label");
 
   $inputs.on("click", function(e) {
     var tar = e.target;

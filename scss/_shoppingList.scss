@@ -58,6 +58,32 @@
                     }
                 }
             }
+            #buyMistakes{
+                padding: 0;
+            }
+            #buyForm{
+                text-align: left;
+                label{
+
+                }
+                input{
+                    width: 80%;
+                }
+                #buyBtn{
+                    padding: 5px 10px;
+                    background-color: green;
+                    display: inline-block;
+                    border: none;
+                    border-radius: 3px;
+                    width: 200px;
+                    color: white;
+                    margin-top: 30px;
+                    padding: 3px 10px;
+                    &:hover{
+                      background-color: lighten(green, 5);
+                    }
+                }
+            }
             #tbWrapper{
                 display: flex;
                 justify-content: flex-end;
@@ -66,6 +92,13 @@
                     border: 1px dashed black;
                     padding: 15px;
                     display: inline-block;
+                }
+                .success{
+                    background-color: green;
+                    color: white;
+                    &:hover{
+                        background-color: lighten(green, 5);
+                      }
                 }
             }
         }
@@ -135,6 +168,13 @@
     #shoppingList{
         #shoppingListWrapper{
             width: 80%;
+            #shoppingListItems{
+                #buyForm{
+                    input{
+                        width: 50%;
+                    }
+                }
+            }
         }
     }
 }
