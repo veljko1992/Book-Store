@@ -60,11 +60,13 @@ main .imgWrapper{
   display: none;
 }
 .faild{
-  color: $red;
+  color: white;
+  background-color: $red;
   border: 1px solid $red;
 }
 .success{
-  color: green;
+  color: white;
+  background-color: green;
   border: 1px solid green;
 }
 .faild, .success, .showBtn{
@@ -88,5 +90,11 @@ main .imgWrapper{
     &:hover{
       background-color: lighten(black, 5);
     }
+  }
+}
+#info{
+  text-align: center;
+  p{
+    margin-bottom: 0;
   }
 }

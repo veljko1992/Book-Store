@@ -2,16 +2,16 @@
 
 #activeForm {
   position: fixed;
-  bottom: 50px;
-  right: 30px;
-  background-color: $red;
+  bottom: 0;
+  right: 0;
+  background-color: green;
   border: 0;
   border-radius: 3px;
   padding: 3px 30px;
   color: white;
   z-index: 10;
   &:hover{
-    background-color: lighten($red, 5);
+    background-color: lighten(green, 5);
   }
 }
 #writeToUs {
@@ -37,6 +37,11 @@
     #form {
       width: 80%;
       padding: 30px;
+      label{
+        position: relative;
+        bottom: -35px;
+        transition: all 0.3s;
+      }
       input {
         border: none;
         border-bottom: 1px solid black;

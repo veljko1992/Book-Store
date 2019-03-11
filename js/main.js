@@ -123,6 +123,11 @@ $(document).ready(function() {
     localStorage.setItem("totalBill", totalBill);
     localStorage.setItem("numArticle", numArticle);
     checkNumArticle();
+    var info = `<div id="info" class="success">
+                  <p>Uspešno ste dodali knjigu u korpu</p>
+                </div>`;
+    $('header').append(info);
+    setTimeout(function(){ $('#info').remove();}, 2000);
   });
   //Prepare items for local storage END
 
@@ -297,14 +302,14 @@ $(document).ready(function() {
     var buyForm = `<h2>ADRESA I PODATCI ISPORUKE</h2>
     <p id="buyMistakes"></p>
     <form id="buyForm" action="">
-    <label for="buyName" class="d_none">Ime:</label><br>
-    <input type="text" id="buyName" name="name" placeholder="Petar Petrovic"><br>
-    <label for="buyEmail" class="d_none">Imejl:</label><br>
-    <input type="email" id="buyEmail" name="email" placeholder="primer@primer.com"><br>
-    <label for="buyNumber" class="d_none">Broj:</label><br>
-    <input type="text" id="buyNumber" name="number" placeholder="069/xxxxxxx"><br>
-    <label for="buyAdress" class="d_none">Adresa:</label><br>
-    <input type="text" id="buyAdress" name="adress" placeholder="Kralja Petra 1121/b, Kaluđerica"><br>
+    <label for="buyName">*Ime:</label><br>
+    <input type="text" id="buyName" name="name"><br>
+    <label for="buyEmail">*E-mail:</label><br>
+    <input type="text" id="buyEmail" name="email"><br>
+    <label for="buyNumber">*Broj: (069/xxxxxx)</label><br>
+    <input type="text" id="buyNumber" name="number"><br>
+    <label for="buyAdress">*Adresa:</label><br>
+    <input type="text" id="buyAdress" name="adress"><br>
     <input id="buyBtn" type="submit" value="Poruči">
   </form>`;
   $shoppingListItems.html(buyForm);
@@ -313,14 +318,19 @@ $(document).ready(function() {
   var $buyLabels = $("#buyForm label");
 
   $buyInputs.on("click", function(e) {
-    var tar = e.target;
-    var label = tar.previousSibling.previousSibling.previousSibling;
-    label.classList.remove("d_none");
+    var label = $(this).prev().prev();
+    label.css('bottom', '0px');
   });
 
   $buyInputs.on("blur", function() {
-    $buyLabels.addClass("d_none");
-  });
+    if($(this).val().length > 0){
+      var label = $(this).prev().prev();
+      label.css('bottom', '0px');
+    }else{
+      var label = $(this).prev().prev();
+      label.css('bottom', '-35px');
+  }
+});
 
     //Validation buy form
     var $buyForm = $("#buyForm");
@@ -440,22 +450,32 @@ $(document).ready(function() {
   var $labels = $("#form label");
 
   $inputs.on("click", function(e) {
-    var tar = e.target;
-    var label = tar.previousSibling.previousSibling.previousSibling;
-    label.classList.remove("d_none");
+    var label = $(this).prev().prev();
+    label.css('bottom', '0px');
   });
   $inputs.on("blur", function() {
-    $labels.addClass("d_none");
+    if($(this).val().length > 0){
+      var label = $(this).prev().prev();
+      label.css('bottom', '0px');
+    }else{
+      var label = $(this).prev().prev();
+      label.css('bottom', '-35px');
+    }
   });
 
   $("textarea").on("click", function(e) {
-    var tar = e.target;
-    var label = tar.previousSibling.previousSibling.previousSibling;
-    label.classList.remove("d_none");
+    var label = $(this).prev().prev();
+    label.css('bottom', '0px');
   });
 
   $("textarea").on("blur", function() {
-    $labels.addClass("d_none");
+    if($(this).val().length > 0){
+      var label = $(this).prev().prev();
+      label.css('bottom', '0px');
+    }else{
+      var label = $(this).prev().prev();
+      label.css('bottom', '-35px');
+    }
   });
 
   //Validation form
