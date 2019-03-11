@@ -215,7 +215,7 @@ $(document).ready(function() {
   function listItems() {
     var items = fetch();
     if (items == null) {
-      $shoppingListItems.append('<p id="empty">Korpa lista je prazna</p>');
+      $shoppingListItems.append('<p id="empty">Korpa je prazna</p>');
     } else {
       createTable(items);
     }
