@@ -259,7 +259,7 @@ $(document).ready(function() {
           table += `<td class='action-quantity' data-quantity="${items[i][prop]}">${items[i][prop]}</td>`;
         }
         if(prop == 'price'){
-          table += `<td class='action-price' data-price="${items[i][prop]}">${items[i][prop]},00 RSD</td>`;
+          table += `<td class='action-price' data-price="${items[i][prop]}">${OSREC.CurrencyFormatter.format(items[i][prop], { currency: 'RSD' })}</td>`;
         }
       }
       table += `<td><button class="faild action-delete">Obriši</button></td>`;
@@ -271,8 +271,7 @@ $(document).ready(function() {
     $shoppingListItems.html(table);
 
     $("#totalBill")
-      .append(localStorage.getItem("totalBill"))
-      .append(",00 RSD");
+      .append(OSREC.CurrencyFormatter.format(localStorage.getItem("totalBill"), { currency: 'RSD' }));
   }
   //Push items to shoping card END
   function getSum(total, num) {
@@ -617,3 +616,6 @@ $(window).on("resize", itemsNum);
 // Load more items end
 
 });
+
+
+

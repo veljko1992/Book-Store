@@ -26,7 +26,7 @@ function createBooks(categoriesBook){
                             <div class="textWrapper">
                               <ul>
                                 <li class="itemName">${categoriesBook[i].name}</li>
-                                <li class="itemPrice">${categoriesBook[i].price},00 RSD</li>
+                                <li class="itemPrice">${OSREC.CurrencyFormatter.format(categoriesBook[i].price, { currency: 'RSD' })}</li>
                                 <li><a href="" class="addItem">Kupite</a></li>
                               </ul>
                             </div>

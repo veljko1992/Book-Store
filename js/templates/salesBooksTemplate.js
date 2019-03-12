@@ -11,7 +11,7 @@ $.getJSON("json/books.json", function (result) {
                             <div class="textWrapper">
                               <ul>
                                 <li class="itemName">${salesBook[i].name}</li>
-                                <li class="itemPrice">${salesBook[i].price},00 RSD</li>
+                                <li class="itemPrice">${OSREC.CurrencyFormatter.format(salesBook[i].price, { currency: 'RSD' })}</li>
                                 <li><a href="" class="addItem">Kupite</a></li>
                               </ul>
                             </div>
