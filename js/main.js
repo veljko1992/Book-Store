@@ -78,6 +78,25 @@ $(document).ready(function() {
   });
   // Smooth scrool navigations link END
 
+  //Shrink hedera on scrool
+  var fromTop;
+
+  $(window).on("scroll", function () {
+      fromTop = $(this).scrollTop();
+      if (fromTop > 200) {
+          $("#headerTop").css('height', '0');
+          nav.css('top', '80px');
+          $('#writeToUs').css('top', '80px');
+          $('#shoppingList').css('top', '80px');
+        } else{ 
+          $("#headerTop").css('height', '60px');;
+          nav.css('top', '140px');
+          $('#writeToUs').css('top', '140px');
+          $('#shoppingList').css('top', '140px');
+      }
+  });
+  //Shrink hedera on scrool END
+
   //Navigation END
 
   //Prepare items for local storage
@@ -301,11 +320,11 @@ $(document).ready(function() {
     $shoppingListItems.empty();
     var buyForm = `<h2>ADRESA I PODATCI ISPORUKE</h2>
     <p id="buyMistakes"></p>
-    <form id="buyForm" action="">
+    <form id="buyForm" action="" novalidate>
     <label for="buyName">*Ime:</label><br>
     <input type="text" id="buyName" name="name"><br>
     <label for="buyEmail">*E-mail:</label><br>
-    <input type="text" id="buyEmail" name="email"><br>
+    <input type="email" id="buyEmail" name="email"><br>
     <label for="buyNumber">*Broj: (069/xxxxxx)</label><br>
     <input type="text" id="buyNumber" name="number"><br>
     <label for="buyAdress">*Adresa:</label><br>
@@ -317,7 +336,7 @@ $(document).ready(function() {
   var $buyInputs = $("#buyForm input");
   var $buyLabels = $("#buyForm label");
 
-  $buyInputs.on("click", function(e) {
+  $buyInputs.on("focus", function(e) {
     var label = $(this).prev().prev();
     label.css('bottom', '0px');
   });
@@ -376,6 +395,13 @@ $(document).ready(function() {
       var email = $("#buyEmail")
         .val()
         .trim();
+
+      if(email.length == 0){
+        $buyMistakes.removeClass("success");
+        $buyMistakes.addClass("faild");
+        $buyMistakes.html("Nije uneta E-mail adresa.");
+        return false;
+      }
   
       var r = new RegExp("[a-z0-9]+@([a-z0-9]+\\.)+[a-z]+");
       if (r.test(email) == false) {
@@ -392,6 +418,13 @@ $(document).ready(function() {
       var number = $("#buyNumber")
         .val()
         .trim();
+
+        if(number.length == 0){
+          $buyMistakes.removeClass("success");
+          $buyMistakes.addClass("faild");
+          $buyMistakes.html("Nije unet broj.");
+          return false;
+        }
   
         var r = new RegExp("06[0-9]/[0-9]+");
       if (r.test(number) == false) {
@@ -449,7 +482,7 @@ $(document).ready(function() {
   var $inputs = $("#form input");
   var $labels = $("#form label");
 
-  $inputs.on("click", function(e) {
+  $inputs.on("focus", function(e) {
     var label = $(this).prev().prev();
     label.css('bottom', '0px');
   });
@@ -463,7 +496,7 @@ $(document).ready(function() {
     }
   });
 
-  $("textarea").on("click", function(e) {
+  $("textarea").on("focus", function(e) {
     var label = $(this).prev().prev();
     label.css('bottom', '0px');
   });
@@ -517,6 +550,13 @@ $(document).ready(function() {
     var email = $("#email")
       .val()
       .trim();
+
+    if(email.length == 0){
+      $mistakes.removeClass("success");
+      $mistakes.addClass("faild");
+      $mistakes.html("Nije uneta E-mail adresa.");
+      return false;
+    }
 
     r = new RegExp("[a-z0-9]+@([a-z0-9]+\\.)+[a-z]+");
     if (r.test(email) == false) {
