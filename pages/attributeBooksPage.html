@@ -36,9 +36,9 @@
         <div id="logo"><a href="../index.html"><img src="../img/logo.png" alt="" class="img-fluid"></a></div>
         <nav>
           <ul>
-            <li><a href="atributeBooksPage.html" data-atribute="new" class="action-page">NOVE KNJIGE</a></li>
-            <li><a href="atributeBooksPage.html" data-atribute="top" class="action-page">TOP KNJIGE</a></li>
-            <li><a href="atributeBooksPage.html" data-atribute="sales" class="action-page">RASPRODAJA KNJIGA</a></li>
+            <li><a href="attributeBooksPage.html" data-attribute="new" class="action-page">NOVE KNJIGE</a></li>
+            <li><a href="attributeBooksPage.html" data-attribute="top" class="action-page">TOP KNJIGE</a></li>
+            <li><a href="attributeBooksPage.html" data-attribute="sales" class="action-page">RASPRODAJA KNJIGA</a></li>
           </ul>
         </nav>
         <!-- Shopingcart -->
@@ -64,8 +64,16 @@
     <!-- Main -->
     <main>
         <div class="container">
-            <h1 id="atributeBooksHeading"></h1>
-            <div id="atributeBookItems" class="row bookSection"></div>
+            <h1 id="attributeBooksHeading"></h1>
+            <div class="sortItems">
+              <label for="attributeSortItems">Sortiraj po:</label>
+              <select name="attributeSortItems" id="attributeSortItems">
+                <option value="default">-----</option>
+                <option value="descending">Po ceni opadajuće</option>
+                <option value="ascending">Po ceni rastuće</option>
+              </select>
+            </div>
+            <div id="attributeBookItems" class="row bookSection"></div>
         </div>
     </main>
       <!-- Write to us -->
@@ -120,8 +128,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- jQuery END -->
-    <!-- Atribute books template -->
-    <script src="../js/templates/atributeBooksTemplate.js"></script>
+    <!-- attribute books template -->
+    <script src="../js/templates/attributeBooksTemplate.js"></script>
     <!-- Main JS -->
     <script src="../js/main.js"></script>
   </body>

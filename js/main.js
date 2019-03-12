@@ -334,7 +334,6 @@ $(document).ready(function() {
   $shoppingListItems.html(buyForm);
 
   var $buyInputs = $("#buyForm input");
-  var $buyLabels = $("#buyForm label");
 
   $buyInputs.on("focus", function(e) {
     var label = $(this).prev().prev();
@@ -480,7 +479,6 @@ $(document).ready(function() {
   }
 
   var $inputs = $("#form input");
-  var $labels = $("#form label");
 
   $inputs.on("focus", function(e) {
     var label = $(this).prev().prev();
@@ -585,10 +583,10 @@ $bookSection.on("click", ".showItem", function(e) {
   var bookId =  $(this).closest(".bookItem").data('id');
   localStorage.setItem('showBookId', bookId);
 });
-//Atribute books 
+//attribute books 
 $('.action-page').on("click", function(e) {
-  var atributeBooks =  $(this).data('atribute');
-  localStorage.setItem('atributeBooks', atributeBooks);
+  var attributeBooks =  $(this).data('attribute');
+  localStorage.setItem('attributeBooks', attributeBooks);
 });
 
 // Load more items

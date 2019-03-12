@@ -98,3 +98,14 @@ main .imgWrapper{
     margin-bottom: 0;
   }
 }
+.sortItems{
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid black;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  label{
+    margin-right: 15px;
+    margin-bottom: 0;
+  }
+}

@@ -36,10 +36,10 @@
         <div id="logo"><a href="../index.html"><img src="../img/logo.png" alt="" class="img-fluid"></a></div>
         <nav>
           <ul>
-            <li><a href="categorieBooksPage.html" data-atribute="social" class="action-page">DRUŠTVENE NAUKE</a></li>
-            <li><a href="categorieBooksPage.html" data-atribute="medicine" class="action-page">MEDICINA</a></li>
-            <li><a href="categorieBooksPage.html" data-atribute="economy" class="action-page">EKONOMIJA</a></li>
-            <li><a href="categorieBooksPage.html" data-atribute="computer" class="action-page">KOMPJUTERSKA LITERATURA</a></li>
+            <li><a href="categoriesBooksPage.html" data-attribute="social" class="action-page">DRUŠTVENE NAUKE</a></li>
+            <li><a href="categoriesBooksPage.html" data-attribute="medicine" class="action-page">MEDICINA</a></li>
+            <li><a href="categoriesBooksPage.html" data-attribute="economy" class="action-page">EKONOMIJA</a></li>
+            <li><a href="categoriesBooksPage.html" data-attribute="computer" class="action-page">KOMPJUTERSKA LITERATURA</a></li>
           </ul>
         </nav>
         <!-- Shopingcart -->
@@ -65,8 +65,16 @@
     <!-- Main -->
     <main>
         <div class="container">
-            <h1 id="categorieBooksHeading"></h1>
-            <div id="categorieBookItems" class="row bookSection"></div>
+            <h1 id="categoriesBooksHeading"></h1>
+            <div class="sortItems">
+                <label for="categoriesSortItems">Sortiraj po:</label>
+                <select name="categoriesSortItems" id="categoriesSortItems">
+                  <option value="default">-----</option>
+                  <option value="descending">Po ceni opadajuće</option>
+                  <option value="ascending">Po ceni rastuće</option>
+                </select>
+              </div>
+            <div id="categoriesBookItems" class="row bookSection"></div>
         </div>
     </main>
       <!-- Write to us -->
@@ -121,8 +129,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- jQuery END -->
-    <!-- Atribute books template -->
-    <script src="../js/templates/categorieBooksTemplate.js"></script>
+    <!-- categories books template -->
+    <script src="../js/templates/categoriesBooksTemplate.js"></script>
     <!-- Main JS -->
     <script src="../js/main.js"></script>
   </body>
