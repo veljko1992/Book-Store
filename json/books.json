@@ -24,7 +24,9 @@
         "attribute" : "sales",
         "categories" : "socila",
         "description" : "Od Konstantinove hristijanizacije do naslednika proroka Muhameda. Izuzetna istorija srednjeg veka u dva toma, doba u kojem je religija postala oružje kraljeva širom sveta. U Istoriji starog sveta Suzan Vajs Bauer je pisala o rađanju kraljevstava na osnovu moći. Ali u godinama... ",
-        "id" : "003"
+        "id" : "003",
+        "discount" : "20%",
+        "oldPrice" : "1486"
     },
     {
         "name" : "KRITIKA PRAKTIČKOG UMA",
@@ -51,7 +53,9 @@
         "categories" : "social",
         "attribute" : "sales",
         "description" : "Prоmеnа u оdnоsu prеmа tеlu kојu је dоnеlо sаvrеmеnо dоbа, u vеlikоm dеlu društаvа dаnаšnjеg svеtа izmеnilа је оptiku krоz kојu sе sаglеdаvа tеlеsnо, a оvа prоmеnа pаrаdigmе uticаlа је i nа istrаživаnjа kоја sе bаvе shvаtаnjеm mеstа i ulоgе tеlа unutаr hrišćаnskе istоriје. Upu...",
-        "id" : "006"
+        "id" : "006",
+        "discount" : "15%",
+        "oldPrice" : "1863"
     },
     {
         "name" : "INTELEKTUALNI ŠARLATANI",
@@ -78,7 +82,9 @@
         "categories" : "medicine",
         "attribute" : "sales",
         "description" : "Najistaknutiji domaći stručnjaci i nekadašnji beogradski studenti koji sada predaju u Londonu, Sent Luisu ili Sidneju, okupili su se da bi prikazali najvažnije trendove u psihoanalitičkim, kognitivno-bihevioralnim, odnosno grupnim i porodičnim pristupima psihoterapiji. Preth...",
-        "id" : "009"
+        "id" : "009",
+        "discount" : "20%",
+        "oldPrice" : "1980"
     },
     {
         "name" : "PRAKTIKUM I ATLAS IZ HISTOLOGIJE I EMBRIOLOGIJE",
@@ -105,7 +111,9 @@
         "categories" : "medicine",
         "attribute" : "sales",
         "description" : "3. izmenjeno i dopunjeno izdanje. Radiologija je poslednjih decenija doživela napredak kakav je doskora bilo nemoguće i naslutiti. Razvijene su klasične slikovne metode pregleda i uvedene nove (ehotomografija, kompjuterizovana tomografija, magnetna rezonanca), a već danas je ...",
-        "id" : "012"
+        "id" : "012",
+        "discount" : "10%",
+        "oldPrice" : "1154"
     },
     {
         "name" : "MOŽDANI UDAR Vodič za prevenciju lečenje i rehabilitaciju",
@@ -123,7 +131,9 @@
         "categories" : "economy",
         "attribute" : "sales",
         "description" : "Knjiga će biti korisna kako privrednicima, konsultantima i lobistima tako i političarima te studentima – pogotovo poslovnih škola, ekonomskih i fakulteta sociologije i političkih nauka. Ona će biti korisna i novinarima, koji često u lobiranju vide samo negativno i često ga izj...",
-        "id" : "014"
+        "id" : "014",
+        "discount" : "30%",
+        "oldPrice" : "1828"
     },
     {
         "name" : "ISLAMSKO BANKARSTVO Teorija i praksa",
@@ -159,7 +169,9 @@
         "categories" : "economy",
         "attribute" : "sales",
         "description" : "Ova knjiga namenjena je svim budućim istraživačima srpske tranzicije i ekonomske degradacije društva krajem XX i početkom XXI veka. Njena knjiga namenjena je čitaocima kojima je stalo da dođu do prave istine i do traganja za njom.",
-        "id" : "018"
+        "id" : "018",
+        "discount" : "20%",
+        "oldPrice" : "1980"
     },
     {
         "name" : "KADA NOVCA PONESTANE",
@@ -186,7 +198,9 @@
         "categories" : "computer",
         "attribute" : "sales",
         "description" : "Gradite prilagodljive, dinamičke i mobile-first aplikacije na Vebu pomoću Bootstrapa 4 Šta ćete naučiti: da kreirate profesionalni veb sajt zasnovan na Bootstrapu, 'od nule', bez upotrebe nezavisnih šablona da iskoristite Bootstrapov moćan sistem rasporeda elemenata da sti...",
-        "id" : "021"
+        "id" : "021",
+        "discount" : "10%",
+        "oldPrice" : "2062"
     },
     {
         "name" : "PHP 7 MYSQL I JAVASCRIPT U JEDNOJ KNJIZI",
@@ -222,7 +236,9 @@
         "categories" : "computer",
         "attribute" : "sales",
         "description" : "Ova knjiga je za početnike i iskusne programere koji žele da uče o Angularu ili veb razvoju uopšte. Ako ste Angular programer, predstavićemo vam ceo proces od projektovanja i primene Angular aplikacije do izrade veb stranica. Učićete o Angular obrascima koje je lako razumeti i...",
-        "id" : "025"
+        "id" : "025",
+        "discount" : "10%",
+        "oldPrice" : "2444"
     },
     {
         "name" : "OBJEKTNO ORIJENTISAN JAVASCRIPT III izdanje",
@@ -240,6 +256,8 @@
         "categories" : "computer",
         "attribute" : "sales",
         "description" : "Ako ste veb programer i želite da kreirate veb aplikacije koje dobro izgledaju, koje su efikasne, imaju bogat korisnički interfejs i integrišu se bez problema sa bilo kojim pozadinskim prikazom pomoću AJAX-a, onda je ova knjiga idealna za vas. Prikazaćemo vam kako možete da in...",
-        "id" : "027"
+        "id" : "027",
+        "discount" : "10%",
+        "oldPrice" : "2077"
     }
 ]

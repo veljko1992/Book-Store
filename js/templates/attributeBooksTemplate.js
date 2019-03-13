@@ -17,16 +17,32 @@ function createBooks(attributeBook){
 
     for(i = 0; i < attributeBook.length; i++){
         if(attributeBook[i].attribute == attributeBooks){
-            attributeItems += `<div class="bookItem col-6 col-sm-4 col-lg-3 imgbox" data-name="${attributeBook[i].name}" data-price="${attributeBook[i].price}" data-id="${attributeBook[i].id}">
-                        <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${attributeBook[i].img}" alt="" class="img-fluid"></a></div>
-                            <div class="textWrapper">
-                              <ul>
-                                <li class="itemName">${attributeBook[i].name}</li>
-                                <li class="itemPrice">${OSREC.CurrencyFormatter.format(attributeBook[i].price, { currency: 'RSD' })}</li>
-                                <li><a href="" class="addItem">Kupite</a></li>
-                              </ul>
-                            </div>
-                        </div>` 
+            if(attributeBook[i].attribute == 'sales'){
+                attributeItems += `<div class="bookItem col-6 col-sm-4 col-lg-3 imgbox" data-name="${attributeBook[i].name}" data-price="${attributeBook[i].price}" data-id="${attributeBook[i].id}">
+                <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${attributeBook[i].img}" alt="" class="img-fluid"></a><div class="discountWrapper">${attributeBook[i].discount}</div></div>
+                    <div class="textWrapper">
+                      <ul>
+                        <li class="itemName">${attributeBook[i].name}</li>
+                        <li class="price">
+                            <div class="itemPrice">${OSREC.CurrencyFormatter.format(attributeBook[i].price, { currency: 'RSD' })}</div>
+                            <div class="itemOldPrice">${OSREC.CurrencyFormatter.format(attributeBook[i].oldPrice, { currency: 'RSD' })}</div>
+                        </li>
+                        <li><a href="" class="addItem">Kupite</a></li>
+                      </ul>
+                    </div>
+                </div>` 
+            } else{
+                attributeItems += `<div class="bookItem col-6 col-sm-4 col-lg-3 imgbox" data-name="${attributeBook[i].name}" data-price="${attributeBook[i].price}" data-id="${attributeBook[i].id}">
+                <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${attributeBook[i].img}" alt="" class="img-fluid"></a></div>
+                    <div class="textWrapper">
+                      <ul>
+                        <li class="itemName">${attributeBook[i].name}</li>
+                        <li class="itemPrice price">${OSREC.CurrencyFormatter.format(attributeBook[i].price, { currency: 'RSD' })}</li>
+                        <li><a href="" class="addItem">Kupite</a></li>
+                      </ul>
+                    </div>
+                </div>` 
+            }
         }
     }
     $attributeBooksWrapper.html(attributeItems);
