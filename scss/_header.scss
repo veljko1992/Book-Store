@@ -28,9 +28,6 @@ header {
             a{
                 color: white;
                 font-size: 20px;
-                // &:hover{
-                //     color: $red;
-                // }
             }
         }
     }
@@ -55,7 +52,7 @@ header {
             display: none;
             ul {
                 position: absolute;
-                top: 110px;
+                top: 130px;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 padding: 0;
@@ -73,7 +70,7 @@ header {
                 li {
                     margin-bottom: 10px;
                 }
-                li:first-child{
+                li.active-bookLinks{
                     position: relative;
                 }
                 a{
@@ -237,7 +234,7 @@ header {
                     span{
                         line-height: 80px;
                     }
-                    li:first-child:hover #booksList{
+                    li.active-bookLinks:hover #booksList{
                         display: block;
                     }
                     li {
