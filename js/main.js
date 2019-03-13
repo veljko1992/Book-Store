@@ -64,7 +64,7 @@ $(document).ready(function() {
   });
 
   // Smooth scrool navigations link
-  var navHeight = 140;
+  var navHeight = 110;
 
   $("nav .navigation-link").on("click", function(e) {
     sectionID = $(this).attr("href");
