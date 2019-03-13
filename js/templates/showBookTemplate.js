@@ -16,7 +16,7 @@ $.getJSON("../json/books.json", function (result) {
                 <div class="textWrapper col-12 col-md-6">
                     <h1>${showBook[i].name}</h1>
                     <p>${showBook[i].description}</p>
-                    <p>${OSREC.CurrencyFormatter.format(showBook[i].price, { currency: 'RSD' })}</p>
+                    <p style="margin-bottom:0;">${OSREC.CurrencyFormatter.format(showBook[i].price, { currency: 'RSD' })}</p>
                     <p class="itemOldPrice">${OSREC.CurrencyFormatter.format(showBook[i].oldPrice, { currency: 'RSD' })}</p>
                     <p><a href="" class="addItem showBtn">Kupite</a></p>
                 </div>

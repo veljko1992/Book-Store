@@ -587,6 +587,11 @@ $('.action-page').on("click", function(e) {
   var attributeBooks =  $(this).data('attribute');
   localStorage.setItem('attributeBooks', attributeBooks);
 });
+//categories books 
+$('.action-page-categories').on("click", function(e) {
+  var categoriesBooks =  $(this).data('categories');
+  localStorage.setItem('categoriesBooks', categoriesBooks);
+});
 
 // Load more items
 var winWidth;

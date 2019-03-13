@@ -1,5 +1,5 @@
 $categoriesBooksWrapper = $('#categoriesBookItems');
-var categoriesBooks = localStorage.getItem('attributeBooks');
+var categoriesBooks = localStorage.getItem('categoriesBooks');
 
 
 
