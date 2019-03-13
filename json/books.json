@@ -18,7 +18,7 @@
         "id" : "002"
     },
     {
-        "name" : "Istorija srednjovekovnog sveta I",
+        "name" : "ISTORIJA SREDNJOVEKOVNOG SVETA I",
         "price" : "1189",
         "img" : "istorijass1.jpg",
         "attribute" : "sales",
@@ -58,7 +58,7 @@
         "oldPrice" : "1863"
     },
     {
-        "name" : "INTELEKTUALNI ŠARLATANI",
+        "name" : "INTELEKTUALNI ŠARLATAN",
         "price" : "712",
         "img" : "intelektualniS.jpg",
         "categories" : "social",
@@ -145,7 +145,7 @@
         "id" : "015"
     },
     {
-        "name" : "GLOBALIZACIJA I NJENE PROTIVREČNOSTI",
+        "name" : "GLOBALIZACIJA i njene protivrečnosti",
         "price" : "1742",
         "img" : "globaizacijaProtivrecnosti.jpg",
         "categories" : "economy",
@@ -221,7 +221,7 @@
         "id" : "023"
     },
     {
-        "name" : "PYTHON RAZVOJ MIKROSERVISA",
+        "name" : "Pyton razvoj mikro servisa",
         "price" : "1650",
         "img" : "python.jpg",
         "categories" : "computer",

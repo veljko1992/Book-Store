@@ -37,6 +37,9 @@
                         font-weight: bold;
                     }
                 }
+                tr td:nth-child(3){
+                    word-break: break-word;
+                }
                 td{
                     padding: 5px 5px;
                     font-size: 14px;
