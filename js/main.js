@@ -7,7 +7,7 @@ $(document).ready(function() {
   var $booksList = $("#booksList");
 
   //Checking the screen width if more than 992 navigation is visible, and if smaller it is hidden
-  if (winWidth >= 992) {
+  if (winWidth >= 1009) {
     nav.css("display", "block");
     menuBtn.css("display", "none");
     $booksList.removeClass("d_none");
@@ -131,7 +131,7 @@ $(document).ready(function() {
         $('#shoppingList').css('top', '80px');
       } else{ 
         $("#headerTop").css('height', '80px');;
-        nav.css('top', '160px');
+        nav.css('top', '140px');
         $('#writeToUs').css('top', '140px');
         $('#shoppingList').css('top', '140px');
     }
