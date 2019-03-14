@@ -23,7 +23,7 @@ function createBooks(categoriesBook){
         if(categoriesBook[i].categories == categoriesBooks){
             if(categoriesBook[i].attribute == 'sales'){
                 categoriesItems += `<div class="bookItem col-6 col-sm-4 col-lg-3 imgbox" data-name="${categoriesBook[i].name}" data-price="${categoriesBook[i].price}" data-id="${categoriesBook[i].id}">
-                <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${categoriesBook[i].img}" alt="" class="img-fluid"></a><div class="discountWrapper">${categoriesBook[i].discount}</div></div>
+                <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${categoriesBook[i].img}" alt="${categoriesBook[i].name}" class="img-fluid"></a><div class="discountWrapper">${categoriesBook[i].discount}</div></div>
                     <div class="textWrapper">
                       <ul>
                         <li class="itemName">${categoriesBook[i].name}</li>
@@ -37,7 +37,7 @@ function createBooks(categoriesBook){
                 </div>` 
             } else{
                 categoriesItems += `<div class="bookItem col-6 col-sm-4 col-lg-3 imgbox" data-name="${categoriesBook[i].name}" data-price="${categoriesBook[i].price}" data-id="${categoriesBook[i].id}">
-                <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${categoriesBook[i].img}" alt="" class="img-fluid"></a></div>
+                <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${categoriesBook[i].img}" alt="${categoriesBook[i].name}" class="img-fluid"></a></div>
                     <div class="textWrapper">
                       <ul>
                         <li class="itemName">${categoriesBook[i].name}</li>

@@ -10,7 +10,7 @@ $.getJSON("../json/books.json", function (result) {
             if(showBook[i].attribute == 'sales'){
                 showItems += `<div class="row bookItem" data-name="${showBook[i].name}" data-price="${showBook[i].price}" data-id="${showBook[i].id}"">
                 <div class="imgWrapper col-12 col-md-6">
-                    <img src="../img/${showBook[i].img}" alt="" class="img-fluid">
+                    <img src="../img/${showBook[i].img}" alt="${showBook[i].name}" class="img-fluid">
                     <div class="discountWrapper">${showBook[i].discount}</div>
                 </div>
                 <div class="textWrapper col-12 col-md-6">
@@ -23,7 +23,7 @@ $.getJSON("../json/books.json", function (result) {
               </div>`
             } else{
                 showItems += `<div class="row bookItem" data-name="${showBook[i].name}" data-price="${showBook[i].price}" data-id="${showBook[i].id}"">
-                <div class="imgWrapper col-12 col-md-6"><img src="../img/${showBook[i].img}" alt="" class="img-fluid"></div>
+                <div class="imgWrapper col-12 col-md-6"><img src="../img/${showBook[i].img}" alt="${showBook[i].name}" class="img-fluid"></div>
                 <div class="textWrapper col-12 col-md-6">
                     <h1>${showBook[i].name}</h1>
                     <p>${showBook[i].description}</p>

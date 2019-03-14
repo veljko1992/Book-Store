@@ -19,7 +19,7 @@ $(document).ready(function() {
   //When we resize the window if more than 992 navigation is gone, and if less is not visible, x is also removed
   $(window).resize(function() {
     winWidth = $(window).innerWidth();
-  
+    
     if (winWidth >= 992) {
       nav.css("display", "block");
       menuBtn.css("display", "none");
