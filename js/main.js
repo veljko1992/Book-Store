@@ -3,7 +3,7 @@ $(document).ready(function() {
   var nav = $("nav");
   var navLi = $("nav li");
   var menuBtn = $("#menu-btn");
-  var winWidth = $(window).width();
+  var winWidth = $(window).innerWidth();
   var $booksList = $("#booksList");
 
   //Checking the screen width if more than 992 navigation is visible, and if smaller it is hidden
@@ -18,7 +18,8 @@ $(document).ready(function() {
   }
   //When we resize the window if more than 992 navigation is gone, and if less is not visible, x is also removed
   $(window).resize(function() {
-    winWidth = $(window).width();
+    winWidth = $(window).innerWidth();
+  
     if (winWidth >= 992) {
       nav.css("display", "block");
       menuBtn.css("display", "none");
@@ -91,8 +92,8 @@ $(document).ready(function() {
         } else{ 
           $("#headerTop").css('height', '80px');;
           nav.css('top', '160px');
-          $('#writeToUs').css('top', '160px');
-          $('#shoppingList').css('top', '160px');
+          $('#writeToUs').css('top', '140px');
+          $('#shoppingList').css('top', '140px');
       }
       if (winWidth >= 576) {
         if (fromTop > 200) {
@@ -113,7 +114,7 @@ $(document).ready(function() {
     if (winWidth >= 576) {
       if (fromTop > 200) {
         $("#headerTop").css('height', '0');
-        nav.css('top', '60px');
+        nav.css('top', '80px');
         $('#writeToUs').css('top', '80px');
         $('#shoppingList').css('top', '80px');
       } else{ 
@@ -131,8 +132,8 @@ $(document).ready(function() {
       } else{ 
         $("#headerTop").css('height', '80px');;
         nav.css('top', '160px');
-        $('#writeToUs').css('top', '160px');
-        $('#shoppingList').css('top', '160px');
+        $('#writeToUs').css('top', '140px');
+        $('#shoppingList').css('top', '140px');
     }
   }
 });
@@ -255,7 +256,7 @@ $(document).ready(function() {
       $shoppingList.css("display", "block");
       $shoppingList.addClass('action-open');
       listItems();
-      var winWidth = $(window).width();
+      var winWidth = $(window).innerWidth();
       if (winWidth >= 992) {
         $('.action-hide').removeClass("d_none");
       } else {
@@ -339,7 +340,7 @@ $(document).ready(function() {
     to_push = JSON.stringify(item);
     localStorage.setItem("countItems", to_push);
     listItems();
-    var winWidth = $(window).width();
+    var winWidth = $(window).innerWidth();
     if (winWidth >= 992) {
       $('.action-hide').removeClass("d_none");
     } else {
@@ -634,13 +635,9 @@ $('.action-page-categories').on("click", function(e) {
   localStorage.setItem('categoriesBooks', categoriesBooks);
 });
 
-// Load more items
-var winWidth;
-var num;
 
 itemsNum();
 $(window).on("resize", itemsNum);
-// Load more items end
 
 });
 

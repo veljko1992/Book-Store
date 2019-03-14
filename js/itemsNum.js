@@ -1,13 +1,16 @@
+// Load more items
+var num;
+
 function itemsNum() {
-    winWidth = $(window).width();
+    winWidth = $(window).innerWidth();
     
     if (winWidth < 576) {
       num = 4;
     }
-    else if (winWidth < 992) {
+    else if (winWidth < 974) {
       num = 6;
     }
-    else if (winWidth > 992) {
+    else if (winWidth > 974) {
       num = 8;
     }
     $('#newBooks .imgbox').css('display', 'none');
@@ -17,3 +20,4 @@ function itemsNum() {
     $('#salesBooks .imgbox').css('display', 'none');
     $("#salesBooks .imgbox").slice(0,num).show();
   }
+  // Load more items end
