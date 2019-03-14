@@ -21,5 +21,6 @@ $.getJSON("json/books.json", function (result) {
     }
 
     $salesBooksWrapper.html(salesItems);
+    itemsNum();
 });
 

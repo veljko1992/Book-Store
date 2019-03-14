@@ -20,5 +20,10 @@ $.getJSON("json/books.json", function (result) {
     }
 
     $newBooksWrapper.html(newItems);
+    itemsNum();
 });
+
+
+
+
 
