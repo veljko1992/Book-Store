@@ -131,7 +131,7 @@ $(document).ready(function() {
         $('#shoppingList').css('top', '80px');
       } else{ 
         $("#headerTop").css('height', '80px');;
-        nav.css('top', '140px');
+        nav.css('top', '160px');
         $('#writeToUs').css('top', '140px');
         $('#shoppingList').css('top', '140px');
     }
