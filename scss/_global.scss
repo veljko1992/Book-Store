@@ -21,7 +21,11 @@ a:hover {
 .bookItem{
   margin-bottom: 30px;
 }
+.imgWrapper{
+  padding-top: 50px;
+}
 main .imgWrapper{
+  padding-top: 0px;
   img{
     transition: all 0.3s;
     &:hover{

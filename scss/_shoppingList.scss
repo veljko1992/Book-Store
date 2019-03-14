@@ -25,6 +25,7 @@
         }
         #shoppingListItems{
             padding: 30px 15px 100px;
+            overflow-x: scroll;
             h2{
            
             }
@@ -37,7 +38,7 @@
                         font-weight: bold;
                     }
                 }
-                tr td:nth-child(3){
+                tr:nth-of-type(2n) td:nth-child(3){
                     word-break: break-word;
                 }
                 td{
@@ -170,6 +171,7 @@
         transform: rotate(-135deg);
       }
 }
+
 @media only screen and (min-width: 576px) { 
 
 }
