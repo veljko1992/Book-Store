@@ -4,7 +4,7 @@ var num;
 function itemsNum() {
     winWidth = $(window).innerWidth();
     
-    if (winWidth < 576) {
+    if (winWidth < 558) {
       num = 4;
     }
     else if (winWidth < 974) {
