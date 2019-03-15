@@ -8,7 +8,7 @@ $.getJSON("../json/books.json", function (result) {
     for(i = 0; i < showBook.length; i++){
         if(showBook[i].id == showBookId){
             if(showBook[i].attribute == 'sales'){
-                showItems += `<div class="row bookItem" data-name="${showBook[i].name}" data-price="${showBook[i].price}" data-id="${showBook[i].id}"">
+                showItems += `<div class="row bookItem" data-name="${showBook[i].name}" data-price="${showBook[i].price}" data-id="${showBook[i].id}">
                 <div class="imgWrapper col-12 col-md-6">
                     <img src="../img/${showBook[i].img}" alt="${showBook[i].name}" class="img-fluid">
                     <div class="discountWrapper">${showBook[i].discount}</div>
