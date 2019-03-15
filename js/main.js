@@ -7,7 +7,7 @@ $(document).ready(function() {
   var $booksList = $("#booksList");
 
   //Checking the screen width if more than 992 navigation is visible, and if smaller it is hidden
-  if (winWidth >= 1009) {
+  if (winWidth >= 992) {
     nav.css("display", "block");
     menuBtn.css("display", "none");
     $booksList.removeClass("d_none");

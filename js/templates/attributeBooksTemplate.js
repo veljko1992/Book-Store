@@ -18,7 +18,7 @@ function createBooks(attributeBook){
     for(i = 0; i < attributeBook.length; i++){
         if(attributeBook[i].attribute == attributeBooks){
             if(attributeBook[i].attribute == 'sales'){
-                attributeItems += `<div class="bookItem col-6 col-sm-4 col-lg-3 imgbox" data-name="${attributeBook[i].name}" data-price="${attributeBook[i].price}" data-id="${attributeBook[i].id}">
+                attributeItems += `<div class="bookItem col-6 col-sm-4 col-lg-3" data-name="${attributeBook[i].name}" data-price="${attributeBook[i].price}" data-id="${attributeBook[i].id}">
                 <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${attributeBook[i].img}" alt="${attributeBook[i].name}" class="img-fluid"></a><div class="discountWrapper">${attributeBook[i].discount}</div></div>
                     <div class="textWrapper">
                       <ul>
@@ -32,7 +32,7 @@ function createBooks(attributeBook){
                     </div>
                 </div>` 
             } else{
-                attributeItems += `<div class="bookItem col-6 col-sm-4 col-lg-3 imgbox" data-name="${attributeBook[i].name}" data-price="${attributeBook[i].price}" data-id="${attributeBook[i].id}">
+                attributeItems += `<div class="bookItem col-6 col-sm-4 col-lg-3" data-name="${attributeBook[i].name}" data-price="${attributeBook[i].price}" data-id="${attributeBook[i].id}">
                 <div class="imgWrapper"><a href="../pages/showBookPage.html" class="showItem"><img src="../img/${attributeBook[i].img}" alt="${attributeBook[i].name}" class="img-fluid"></a></div>
                     <div class="textWrapper">
                       <ul>
