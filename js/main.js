@@ -554,6 +554,33 @@ $(document).ready(function() {
   var $form = $("#form");
   var $mistakes = $("#mistakes");
 
+  var $allInputsMsgForm = $("#form input, #form textarea");
+  
+  // regex patterns
+  const patterns = {
+    name: /^[a-zA-Z]+$/,
+    email: /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/,
+    msg: /^[a-z\d-]+$/
+  };
+  
+  // validation function
+  function validate(field, regex) {
+
+    if (regex.test(field.value)) {
+      field.className = 'valid';
+    } else {
+      field.className = 'invalid';
+    }
+
+  }
+
+  // attach keyup events to inputs
+  $allInputsMsgForm.on('keyup', (e) => {
+      // console.log(patterns[e.target.attributes.name.value]);
+      validate(e.target, patterns[e.target.attributes.name.value]);
+    });
+  
+
   $form.on("submit", e => {
     e.preventDefault();
     $mistakes.empty();
@@ -566,6 +593,8 @@ $(document).ready(function() {
       $mistakes.html("Uspesno ste poslali poruku.");
       $("#name, #email").val("");
       $("textarea").val("");
+      $("#name, #email").removeClass("valid");
+      $("textarea").removeClass("valid");
       return true;
     } else {
       return false;

@@ -105,15 +105,18 @@
               <div class="exitWrapper">
                   <div id="exit2" class="exit"><span></span> <span></span></div>
                 </div>
-            <form id="form" novalidate>
+            <form id="form" novalidate autocomplete="off">
               <h2>PIŠITE NAM</h2>
               <p id="mistakes"></p>
               <label for="name">*Ime:</label><br>
               <input type="text" id="name" name="name"><br>
+              <p>Ime mora da sadrži barem jedan karakter</p>
               <label for="email">*E-mail:</label><br>
               <input type="email" id="email" name="email"><br>
+              <p>E-mail mora da bude validan, ja@mojdomen.com</p>
               <label for="msg">*Poruka:</label><br>
               <textarea name="msg" id="msg" rows="1"></textarea><br>
+              <p>Poruka mora da sadrži barem jedan karakter</p>
               <input id="btn" type="submit" value="Pošalji">
             </form>
           </div>

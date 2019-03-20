@@ -10,7 +10,7 @@
   padding: 3px 30px;
   color: white;
   z-index: 10;
-  &:hover{
+  &:hover {
     background-color: lighten(green, 5);
   }
 }
@@ -25,7 +25,7 @@
   display: none;
   overflow-y: scroll;
   padding: 0 15px 200px;
-  transition: all .5s;
+  transition: all 0.5s;
   #formWrapper {
     width: 100%;
     background-color: white;
@@ -38,7 +38,7 @@
     #form {
       width: 80%;
       padding: 30px;
-      label{
+      label {
         position: relative;
         bottom: -35px;
         transition: all 0.3s;
@@ -49,28 +49,68 @@
         width: 100%;
         margin-bottom: 20px;
       }
-      input:focus, textarea:focus{
-        border-bottom: 2px solid $red;
+      input:focus,
+      textarea:focus {
+        border-bottom: 2px solid orange;
         outline: none;
       }
-      textarea{
+      textarea {
         border: none;
         border-bottom: 1px solid black;
         width: 100%;
       }
-      #btn{
-          padding: 5px 10px;
-          background-color: $red;
-          display: inline-block;
-          border: none;
-          border-radius: 3px;
-          width: 200px;
-          color: white;
-          margin-top: 30px;
-          padding: 3px 10px;
-          &:hover{
-            background-color: lighten($red, 5);
-          }
+      #btn {
+        padding: 5px 10px;
+        background-color: $red;
+        display: inline-block;
+        border: none;
+        border-radius: 3px;
+        width: 200px;
+        color: white;
+        margin-top: 30px;
+        padding: 3px 10px;
+        &:hover {
+          background-color: lighten($red, 5);
+        }
+      }
+      input.valid {
+        border-color: #36cc36;
+      }
+      input.invalid {
+        border-color: $red;
+      }
+      textarea.valid {
+        border-color: #36cc36;
+      }
+      textarea.invalid {
+        border-color: $red;
+      }
+      input + br + p {
+        font-family: arial;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 0;
+        color: $red;
+        opacity: 0;
+        height: 0;
+      }
+      input.invalid + br + p {
+        opacity: 1;
+        height: auto;
+      }
+      textarea + br + p {
+        font-family: arial;
+        font-size: 0.9em;
+        font-weight: bold;
+        text-align: left;
+        color: $red;
+        opacity: 0;
+        height: 0;
+      }
+      textarea.invalid + br + p {
+        opacity: 1;
+        height: auto;
       }
     }
   }
@@ -86,12 +126,12 @@
     #formWrapper {
       width: 80%;
       #form {
-          input{
-              width: 50%;
-          }
-          textarea{
-              width: 50%;
-          }
+        input {
+          width: 50%;
+        }
+        textarea {
+          width: 50%;
+        }
       }
     }
   }
