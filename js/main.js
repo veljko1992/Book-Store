@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  //Registration sw
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js')
+      .then(function () {
+        console.log('SW registered');
+      });
+  }
+
   //Navigation
   var nav = $("nav");
   var navLi = $("nav li");
