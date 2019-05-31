@@ -8,6 +8,7 @@ Plugins was written in the package.json file.
 I used the Font Awesome for icons, I extracted some parts of the code from the Bootstrap framework for reboot and grid, the jQuery library for DOM motion and for some animations and Currency formatter for price formatting.
 I used the JSON file for the database and pulled data with AJAX.
 All page changes and user entries are stored on Local storage.
+Aplication is PWA and you can install on your mobile.
 
 The user can add more books to the shoppingcart, delete the unwanted ones and continue on with the purchase where the delivery information is entered.
 He can see more book categories, a book with details and a new, top and books on sale.
@@ -16,4 +17,4 @@ It is possible to write a validated message, not go to the server, and notify th
 Veljko Ivanovic
 
 
-https://veljko1992.github.io/Book-Store/
+https://veljko1992.github.io/book-store/
